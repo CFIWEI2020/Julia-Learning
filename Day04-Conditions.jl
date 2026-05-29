@@ -47,7 +47,7 @@ else
 end
 
 
-## temputer > 80 且 pressure > 1.2(&& 而且的意思 ; || 或者)
+## temputer > 80 且 pressure > 1.2(&& 而且and的意思 ; || 或者 or)
 if temperature > 80 && pressure > 1.2
     println("Temperature Alarm")
 elseif pressure > 1.2
@@ -63,7 +63,7 @@ end
 if  temperature > 80 &&
     pressure > 1.2 &&
     flow_rate >100
-    
+
     println("Chamber Alarm")
 else
     println("System Normal")

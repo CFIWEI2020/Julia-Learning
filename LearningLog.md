@@ -76,5 +76,9 @@ I also learned how to use `&&` (AND) to check multiple conditions at the same ti
 
 This example is similar to monitoring semiconductor equipment parameters such as temperature and pressure.
 
+Reflection:
 
+Conditional statements can be used to monitor equipment status.
+
+In the future, I can apply this logic to equipment alarms, sensor monitoring, and data analysis projects.
 
