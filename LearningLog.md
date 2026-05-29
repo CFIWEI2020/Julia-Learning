@@ -20,3 +20,22 @@ Learned:
 
 Reflection:
 Arrays in Julia are 1-indexed, unlike many other languages.
+
+
+
+## Day 3 
+
+learned:
+- Functions
+- Parameters
+- Return values
+
+Example:
+
+function add(a,b)
+    return a+b
+end
+
+Reflection:
+
+Functions allow code reuse and make programs easier to organize.
