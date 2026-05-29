@@ -106,6 +106,8 @@ Charllen example!
 
 Reflection:
 
-Loops allow a program to process multiple data points automatically.
+Today I learned how to use loops to process multiple pressure readings automatically.
 
-This concept can be applied to equipment sensor monitoring and log analysis.
+By combining loops with conditions, I can identify abnormal values and count equipment alarms.
+
+This is similar to monitoring semiconductor equipment sensor data.
