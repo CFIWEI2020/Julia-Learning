@@ -102,6 +102,8 @@ for temp in temperatures
     end
 end
 
+Charllen example!
+
 Reflection:
 
 Loops allow a program to process multiple data points automatically.
