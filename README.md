@@ -84,3 +84,7 @@ end
 ## GitHub Learning Log
 
 This repository is updated daily as part of my self-study journey toward algorithm development and semiconductor engineering.
+
+## Long-Term Goal
+
+Become an Algorithm Developer in the semiconductor industry through continuous learning in programming, data analysis, computer vision, and machine learning.
