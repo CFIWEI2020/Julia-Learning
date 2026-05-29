@@ -82,3 +82,28 @@ Conditional statements can be used to monitor equipment status.
 
 In the future, I can apply this logic to equipment alarms, sensor monitoring, and data analysis projects.
 
+## Day 5
+
+Learned:
+- for loop
+- iteration
+- looping through arrays
+- combining loops and conditions
+
+Example:
+
+temperatures = [75, 78, 82, 85, 79]
+
+for temp in temperatures
+    if temp > 80
+        println("Alarm")
+    else
+        println("Normal")
+    end
+end
+
+Reflection:
+
+Loops allow a program to process multiple data points automatically.
+
+This concept can be applied to equipment sensor monitoring and log analysis.
