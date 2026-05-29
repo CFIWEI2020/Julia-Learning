@@ -13,8 +13,8 @@ This repository documents my Julia programming learning journey.
 
 - Day01 Variables
 - Day02 Arrays
-- Day03 Functions----0529
-- Day04 Conditions
+- Day03 Functions
+- Day04 Conditions----0529
 - Day05 Loops
 - Day06 Dictionaries
 - Day07 Structs
