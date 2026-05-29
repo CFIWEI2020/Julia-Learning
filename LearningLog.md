@@ -151,3 +151,4 @@ Today I realized that dictionaries can represent real equipment data.
 Instead of storing temperature and pressure in separate variables, I can organize them into a single equipment record.
 
 This feels closer to how real-world semiconductor equipment monitoring systems work.
+
