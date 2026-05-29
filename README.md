@@ -16,5 +16,5 @@ This repository documents my Julia programming learning journey.
 - Day03 Functions
 - Day04 Conditions
 - Day05 Loops
-- Day06 Dictionaries-----0530
-- Day07 Structs
+- Day06 Dictionaries
+- Day07 Structs-----0530

@@ -111,3 +111,43 @@ Today I learned how to use loops to process multiple pressure readings automatic
 By combining loops with conditions, I can identify abnormal values and count equipment alarms.
 
 This is similar to monitoring semiconductor equipment sensor data.
+
+## Day 6
+
+Learned:
+- Dictionaries
+- Key-Value pairs
+- Accessing dictionary values
+- Looping through multiple dictionaries
+- Combining dictionaries with conditions
+
+Example:
+
+equipments = [
+
+    Dict(
+        "temperature" => 85,
+        "pressure" => 1.3
+    ),
+
+    Dict(
+        "temperature" => 75,
+        "pressure" => 1.1
+    )
+
+]
+
+for equip in equipments
+
+    println("Temperature = $(equip["temperature"])")
+    println("Pressure = $(equip["pressure"])")
+
+end
+
+Reflection:
+
+Today I realized that dictionaries can represent real equipment data.
+
+Instead of storing temperature and pressure in separate variables, I can organize them into a single equipment record.
+
+This feels closer to how real-world semiconductor equipment monitoring systems work.
