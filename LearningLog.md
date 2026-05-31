@@ -152,3 +152,16 @@ Instead of storing temperature and pressure in separate variables, I can organiz
 
 This feels closer to how real-world semiconductor equipment monitoring systems work.
 
+## Day 7
+
+Learned:
+
+- Struct
+- Custom Data Types
+- Object Creation
+- Attribute Access
+- Equipment Monitoring Logic 
+
+Reflection:
+
+created my first Equipment strcut and simulated equipment mornitoring with temperature , pressure and flow rate alarms.
