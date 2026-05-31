@@ -14,7 +14,7 @@ end
 #建立物件
 tool1 = Equipment(85, 1.3, 120)
 
-＃讀取物件的屬性
+#讀取物件的屬性
 println(tool1.temperature) # 85
 println(tool1.pressure) # 1.3
 println(tool1.flow_rate) # 95
@@ -31,8 +31,3 @@ end
 if tool1.flow_rate > 100
     println("Flow Rate Alarm")
 end
-
-
-
-
-

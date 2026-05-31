@@ -46,7 +46,6 @@ if equipment["temperature"] > 80
         println("Presssure Alarm")
     else
             println("Equipment Normal")
-    end
 end
 
 
