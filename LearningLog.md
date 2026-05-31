@@ -165,3 +165,5 @@ Learned:
 Reflection:
 
 created my first Equipment strcut and simulated equipment mornitoring with temperature , pressure and flow rate alarms.
+
+Evaluation exam by acknowledging self.
