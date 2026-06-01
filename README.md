@@ -82,13 +82,24 @@ end
 
 ---
 
-## GitHub Learning Log
-
-This repository is updated daily as part of my self-study journey toward algorithm development and semiconductor engineering.
-
 ## Long-Term Goal
 
-Become an Algorithm Developer in the semiconductor industry through continuous learning in programming, data analysis, computer vision, and machine learning.
+Julia
+→ Python
+→ Data Analysis
+→ Machine Learning
+→ Computer Vision
+→ Semiconductor Projects
+
+Portfolio Goals:
+
+- Semiconductor Equipment Monitoring
+- Wafer Yield Analysis
+- Computer Vision Defect Detection
+
+## GitHub Learning Log
+
+This repository is updated regularly as part of my self-study journey toward becoming an Algorithm Developer in the semiconductor industry.
 
 ## Julia Fundamentals Assessment
 
@@ -149,6 +160,22 @@ Julia Learning
 
 ### Next
 
-- [ ] Day08 CSV Files
+- [x] Day08 CSV Files
 - [ ] Day09 DataFrames
 - [ ] Day10 Statistics
+
+## Long-Term Roadmap
+
+Julia → Python → Data Analysis → Machine Learning → Computer Vision → Semiconductor Projects
+
+Target:
+
+- Applied Materials (AMAT)
+- ASML
+- TSMC
+
+Portfolio Goals:
+
+- Semiconductor Equipment Monitoring
+- Wafer Yield Analysis
+- Computer Vision Defect Detection

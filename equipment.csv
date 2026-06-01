@@ -1,0 +1,4 @@
+tool_id,temperature,pressure,flow_rate
+A01,85,1.3,95
+A02,70,1.1,120
+A03,90,1.4,80

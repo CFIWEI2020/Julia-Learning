@@ -212,3 +212,52 @@ Next Step:
 - Day08 CSV Files
 - Day09 DataFrames
 - Day10 Statistics
+
+
+# Learning Log
+
+## Day08 - CSV Files
+
+### What I Learned
+- Installed and used CSV.jl and DataFrames.jl
+- Created a CSV file to store equipment monitoring data
+- Loaded CSV data into a DataFrame using CSV.read()
+- Accessed DataFrame columns with data[!, :column_name]
+- Used eachrow(data) to iterate through equipment records
+- Applied conditional logic to detect temperature alarms
+
+### Key Concepts
+- CSV files are commonly used for storing manufacturing and equipment data.
+- DataFrames allow structured data analysis similar to Excel tables.
+- data[!, :temperature] extracts an entire column.
+- eachrow(data) allows processing one equipment record at a time.
+
+### Semiconductor Equipment Example
+Created an equipment monitoring dataset:
+
+| Tool ID | Temperature | Pressure | Flow Rate |
+|----------|------------|----------|-----------|
+| A01 | 85 | 1.3 | 95 |
+| A02 | 70 | 1.1 | 120 |
+| A03 | 90 | 1.4 | 80 |
+
+Implemented alarm logic:
+
+- Temperature > 80 → Temperature Alarm
+- Otherwise → Normal
+
+### Challenges Encountered
+- Learned that DataFrame column names must exactly match CSV headers.
+- Debugged column access errors caused by formatting issues.
+- Learned the difference between column-based access and row-based access.
+
+### Career Relevance
+CSV and DataFrames are foundational tools for:
+- Semiconductor equipment monitoring
+- Process data analysis
+- Yield analysis
+- Machine Learning datasets
+- Applied Materials algorithm development projects
+
+### Progress
+Completed Day08 CSV Files successfully.
