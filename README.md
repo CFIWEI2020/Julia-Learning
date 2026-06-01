@@ -49,6 +49,7 @@ Future Focus:
 - ✅ Day06 Dictionaries
 - ✅ Day07 Structs
 
+
 ### Next
 
 - Day08 CSV Files
@@ -116,3 +117,38 @@ Next:
 - Day08 CSV Files
 - Day09 DataFrames
 - Day10 Statistics
+
+## Career Goal
+
+Target Position:
+
+Algorithm Developer
+
+Target Companies:
+
+- Applied Materials (AMAT)
+- ASML
+- TSMC AI / ML related positions
+
+Focus Areas:
+
+- Data Analysis
+- Machine Learning
+- Computer Vision
+- Semiconductor Equipment Analytics
+
+Julia Learning
+
+- [x] Day01 Variables
+- [x] Day02 Arrays
+- [x] Day03 Functions
+- [x] Day04 Conditions
+- [x] Day05 Loops
+- [x] Day06 Dictionaries
+- [x] Day07 Structs
+
+### Next
+
+- [ ] Day08 CSV Files
+- [ ] Day09 DataFrames
+- [ ] Day10 Statistics
