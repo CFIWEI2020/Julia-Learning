@@ -167,3 +167,48 @@ Reflection:
 created my first Equipment strcut and simulated equipment mornitoring with temperature , pressure and flow rate alarms.
 
 Evaluation exam by acknowledging self.
+
+## Julia Fundamentals Assessment
+
+Date: 2026-06-01
+
+Topics Covered:
+
+- Variables
+- Arrays
+- Functions
+- Conditions
+- Loops
+- Dictionaries
+- Structs
+
+Results:
+
+- Variables ✅
+- Arrays ✅
+- Functions ⚠️ (Need more practice with function calls)
+- Conditions ✅
+- Loops ✅
+- Dictionaries ✅
+- Structs ✅
+
+Score:
+
+- 73 / 80
+- Approximate Understanding: 90%
+
+Reflection:
+
+Completed a self-assessment covering Julia fundamentals.
+
+I can now create variables, arrays, functions, conditions, loops, dictionaries, and structs independently.
+
+The main area for improvement is using functions more naturally and building larger programs by combining multiple concepts together.
+
+This assessment confirmed that I am ready to move from Julia syntax learning to real-world data processing using CSV files and DataFrames.
+
+Next Step:
+
+- Day08 CSV Files
+- Day09 DataFrames
+- Day10 Statistics

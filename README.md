@@ -88,3 +88,31 @@ This repository is updated daily as part of my self-study journey toward algorit
 ## Long-Term Goal
 
 Become an Algorithm Developer in the semiconductor industry through continuous learning in programming, data analysis, computer vision, and machine learning.
+
+## Julia Fundamentals Assessment
+
+Completed: 2026-06-01
+
+Score: 73 / 80
+
+Understanding Level: ~90%
+
+Covered Topics:
+
+- Variables
+- Arrays
+- Functions
+- Conditions
+- Loops
+- Dictionaries
+- Structs
+
+Status:
+
+✅ Ready for Data Analysis Stage
+
+Next:
+
+- Day08 CSV Files
+- Day09 DataFrames
+- Day10 Statistics

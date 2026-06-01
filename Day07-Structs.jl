@@ -12,6 +12,7 @@ struct Equipment
     flow_rate
 end
 #建立物件
+
 tool1 = Equipment(85, 1.3, 120)
 
 #讀取物件的屬性
