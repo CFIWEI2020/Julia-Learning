@@ -3,6 +3,10 @@
 
 #= 向量（Vector）是同時具備「大小（長度）」與「方向」的數學或物理量。
 常見的例子包含速度、力、加速度和位移。相對地，只有大小而沒有方向的量稱為純量（如溫度、質量）。
+
+
+ Equipment = 類別 / 藍圖（Struct）
+tool1 = 依照藍圖建立出來的設備物件
 =#
 
 #定義Structs
@@ -18,7 +22,7 @@ tool1 = Equipment(85, 1.3, 120)
 #讀取物件的屬性
 println(tool1.temperature) # 85
 println(tool1.pressure) # 1.3
-println(tool1.flow_rate) # 95
+println(tool1.flow_rate) # 120
 
 #結合conditionals
 if tool1.temperature > 80
