@@ -1,5 +1,6 @@
 using CSV
 using DataFrames
+using Statistics
 
 data = CSV.read(
     "equipment.csv",
@@ -7,6 +8,8 @@ data = CSV.read(
 )
 println(data)
 println(names(data))
+println(data[!, :temperature])
+mean(data[!, :temperature])
 
 for temp in data[!, :temperature]
 
