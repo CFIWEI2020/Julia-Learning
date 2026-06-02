@@ -79,9 +79,11 @@ for press in pressures
     if press > 1.2
         println("$press -> Alarm")
         alarm_count += 2
+        println("Current Count = $alarm_count")
     elseif press < 1.0
         println("$press -> Alarm")
         alarm_count += 1
+        println("Current Count = $alarm_count")
     else
         println("$press -> Normal")
     end
