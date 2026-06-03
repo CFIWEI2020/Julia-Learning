@@ -262,21 +262,24 @@ CSV and DataFrames are foundational tools for:
 ### Progress
 Completed Day08 CSV Files successfully.
 
-## Day09
+## Day09 - DataFrames
 
-Learned:
+### What I Learned
 
-- DataFrames
-- Data Inspection
-- Mean
-- Maximum
-- Minimum
-- Equipment Alarm Detection
+- Loaded CSV data into a DataFrame
+- Used size() to inspect dataset dimensions
+- Used names() to view column names
+- Calculated average, maximum, and minimum values using Statistics.jl
+- Used eachrow() to iterate through equipment records
+- Built temperature, pressure, and critical alarm detection logic
 
-Reflection:
+### Key Concepts
 
-Today I learned how to analyze data using DataFrames.
+- DataFrames are table-like structures for data analysis
+- Columns can be accessed using data.column_name
+- mean(), maximum(), and minimum() are basic statistical functions
+- eachrow() allows row-by-row analysis
 
-I calculated average, maximum, and minimum values from equipment data and built simple alarm detection logic.
+### Reflection
 
-This is my first step toward semiconductor equipment analytics and machine learning.
+Today I learned how to analyze equipment data using DataFrames. I calculated statistics and implemented alarm detection logic for semiconductor equipment monitoring. This is an important step toward data analysis and machine learning applications.

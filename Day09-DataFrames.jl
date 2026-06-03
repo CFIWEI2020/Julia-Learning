@@ -26,12 +26,12 @@ println(minimum(data[!, :temperature]))
 
 for row in eachrow(data)
     if row.temperature > 80
-        println( "$(row.tool_id) Temperature Alram")
+        println( "$(row.tool_id) Temperature Alarm")
     end
 end
 
-println("Aerage Temperature:")
-println(maximum(data.temperature))
+println("Average Temperature:")
+println(mean(data.temperature))
 println("Maximum Temperature")
 println(maximum(data.temperature))
 println("Minimum Temperature")
@@ -39,11 +39,11 @@ println(minimum(data[!, :temperature]))
 
 
 # Challenge 
-pressure > 1.2
+# pressure > 1.2
 # 提式 row.pressure
 for row in eachrow(data)
     if row.pressure > 1.2
-        println("$(row.pressure) Pressure Alarm")
+        println("$(row.tool_id) Pressure Alarm")
     end
 end
 
