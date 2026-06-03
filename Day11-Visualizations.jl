@@ -9,7 +9,7 @@ plot(temps)
 plot(
     temps,
     title = "Temperature Trend",
-    xlabel = "Measuremnet",
+    xlabel = "Measurement",
     ylabel = "Temperature"
 )
 

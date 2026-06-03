@@ -1,12 +1,14 @@
-
-mean()      #平均值 （一組數據的總和，除以數據個數。）
-maximum()   #最大值
-minimum()   #最小值
-sum()       #總和
-median()    #中位數 （一組數據由小到大排列後，最中間的那個數。）
-std()       #標準差 （Standard Deviation，簡稱 std）
-            #數據的「分散程度」，代表這些數值距離平均數的「平均距離」或波動大小。
 using Statistics 
+using CSV # Comma-Separated Values 每個檔案都要,去分開
+using DataFrames# 表格式資料結構,類似 Excel ,類似 Python Pandas
+
+# mean()      平均值 （一組數據的總和，除以數據個數。）
+# maximum()   最大值
+# minimum()   最小值
+# sum()       總和
+# median()    中位數 （一組數據由小到大排列後，最中間的那個數。）
+# std()       標準差 （Standard Deviation，簡稱 std）
+#             數據的「分散程度」，代表這些數值距離平均數的「平均距離」或波動大小。
 
 temps = [70, 75, 85, 90, 80]
 
@@ -23,10 +25,6 @@ Pressure Stability
 Flow Stability
 =#
 
-using CSV # Comma-Separated Values 每個檔案都要,去分開
-using DataFrames# 表格式資料結構,類似 Excel ,類似 Python Pandas
-using Statistics # 統計學 mean(), std(), median()
-
 data = CSV.read(
     "equipment.csv",
     DataFrame
@@ -41,9 +39,9 @@ println(minimum(data.temperature))
 #println(std(data[!, :temperature]))
 println(std(data.temperature))
 
-#Day10 Challenge
-# Equipement Health Report
-println("===Equipment Helth Report===")
+# Day10 Challenge
+# Equipment Health Report
+println("===Equipment Health Report===")
 println("Average Temperature:")
 println(mean(data[!, :temperature]))
 println("Maximum Temperature:")
@@ -53,7 +51,7 @@ println(minimum(data[!, :temperature]))
 println("Temperature Std:")
 println(std(data.temperature))
 
-# Caculate average temperature
+# Calculate average temperature
 ave_temp = mean(data[!, :temperature])
 println("Average Temperature = $ave_temp")
 

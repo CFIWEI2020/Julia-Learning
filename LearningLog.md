@@ -1,54 +1,63 @@
 # Julia Learning Log
 
-## Day 1
+## Day01 - Variables
 
-Learned:
-  1.Variables()
-  2.Strings()
-  3.Integer()
-  4.println()
+### Learned
 
-Reflection:
+- Variables
+- Strings
+- Integers
+- `println()`
+
+### Reflection
+
 Started learning Julia and created my first GitHub repository.
 
-## Day 2
+## Day02 - Arrays
 
-Learned:
-  1.Arrays
-  2.Indexing
-  3.sum()
+### Learned
 
-Reflection:
+- Arrays
+- Indexing
+- `sum()`
+
+### Reflection
+
 Arrays in Julia are 1-indexed, unlike many other languages.
 
-## Day 3
+## Day03 - Functions
 
-learned:
-  1.Functions
-  2.Parameters
-  3.Return values
+### Learned
 
-Example:
+- Functions
+- Parameters
+- Return values
 
-function add(a,b)
-    return a+b
+### Example
+
+```julia
+function add(a, b)
+    return a + b
 end
+```
 
-Reflection:
+### Reflection
 
 Functions allow code reuse and make programs easier to organize.
 
-## Day 4
+## Day04 - Conditions
 
-Learned:
-  1.if
-  2.else
-  3.elseif
-  4.Comparison operators (>, <, >=, <=)
-  5.Logical operators (&&, ||)
+### Learned
 
-Example:
+- `if`
+- `else`
+- `elseif`
+- Comparison operators: `>`, `<`, `>=`, `<=`
+- Logical operators: `&&`, `||`
 
+### Example
+
+```julia
 temperature = 85
 pressure = 1.3
 
@@ -57,37 +66,28 @@ if temperature > 80 && pressure > 1.2
 else
     println("Equipment Normal")
 end
+```
 
-Reflection:
+### Reflection
 
 Today I learned how to use conditions to make decisions in a program.
 
-I initially wrote:
+I initially wrote `else pressure > 1.2` and discovered that Julia requires `elseif` when adding another condition.
 
-else pressure > 1.2
+This example is similar to monitoring semiconductor equipment parameters such as temperature and pressure. Conditional statements can be used for equipment alarms, sensor monitoring, and data analysis projects.
 
-and discovered that Julia requires `elseif` when adding another condition.
+## Day05 - Loops
 
-I also learned how to use `&&` (AND) to check multiple conditions at the same time.
+### Learned
 
-This example is similar to monitoring semiconductor equipment parameters such as temperature and pressure.
+- `for` loops
+- Iteration
+- Looping through arrays
+- Combining loops and conditions
 
-Reflection:
+### Example
 
-Conditional statements can be used to monitor equipment status.
-
-In the future, I can apply this logic to equipment alarms, sensor monitoring, and data analysis projects.
-
-## Day 5
-
-Learned:
-  1.for loop
-  2.iteration
-  3.looping through arrays
-  4.combining loops and conditions
-
-Example:
-
+```julia
 temperatures = [75, 78, 82, 85, 79]
 
 for temp in temperatures
@@ -97,78 +97,69 @@ for temp in temperatures
         println("Normal")
     end
 end
+```
 
-Challeng Example!
-
-Reflection:
+### Reflection
 
 Today I learned how to use loops to process multiple pressure readings automatically.
 
-By combining loops with conditions, I can identify abnormal values and count equipment alarms.
+By combining loops with conditions, I can identify abnormal values and count equipment alarms. This is similar to monitoring semiconductor equipment sensor data.
 
-This is similar to monitoring semiconductor equipment sensor data.
+## Day06 - Dictionaries
 
-## Day 6
+### Learned
 
-Learned:
-  1.Dictionaries
-  2.Key-Value pairs
-  3.Accessing dictionary values
-  4.Looping through multiple dictionaries
-  5.Combining dictionaries with conditions
+- Dictionaries
+- Key-value pairs
+- Accessing dictionary values
+- Looping through multiple dictionaries
+- Combining dictionaries with conditions
 
-Example:
+### Example
 
+```julia
 equipments = [
-
     Dict(
         "temperature" => 85,
         "pressure" => 1.3
     ),
-
     Dict(
         "temperature" => 75,
         "pressure" => 1.1
     )
-
 ]
 
 for equip in equipments
-
     println("Temperature = $(equip["temperature"])")
     println("Pressure = $(equip["pressure"])")
-
 end
+```
 
-Reflection:
+### Reflection
 
 Today I realized that dictionaries can represent real equipment data.
 
-Instead of storing temperature and pressure in separate variables, I can organize them into a single equipment record.
+Instead of storing temperature and pressure in separate variables, I can organize them into a single equipment record. This feels closer to how real-world semiconductor equipment monitoring systems work.
 
-This feels closer to how real-world semiconductor equipment monitoring systems work.
+## Day07 - Structs
 
-## Day 7
+### Learned
 
-Learned:
+- Structs
+- Custom data types
+- Object creation
+- Attribute access
+- Equipment monitoring logic
 
-- Struct
-- Custom Data Types
-- Object Creation
-- Attribute Access
-- Equipment Monitoring Logic
+### Reflection
 
-Reflection:
-
-created my first Equipment strcut and simulated equipment mornitoring with temperature , pressure and flow rate alarms.
-
-Evaluation exam by acknowledging self.
+Created my first `Equipment` struct and simulated equipment monitoring with temperature, pressure, and flow rate alarms.
 
 ## Julia Fundamentals Assessment
 
 Date: 2026-06-01
 
-Topics Covered:
+### Topics Covered
 
 - Variables
 - Arrays
@@ -178,36 +169,28 @@ Topics Covered:
 - Dictionaries
 - Structs
 
-Results:
+### Results
 
-- Variables ✅
-- Arrays ✅
-- Functions ⚠️ (Need more practice with function calls)
-- Conditions ✅
-- Loops ✅
-- Dictionaries ✅
-- Structs ✅
+- Variables: Complete
+- Arrays: Complete
+- Functions: Need more practice with function calls
+- Conditions: Complete
+- Loops: Complete
+- Dictionaries: Complete
+- Structs: Complete
 
-Score:
+### Score
 
 - 73 / 80
-- Approximate Understanding: 90%
+- Approximate understanding: 90%
 
-Reflection:
+### Reflection
 
 Completed a self-assessment covering Julia fundamentals.
 
-I can now create variables, arrays, functions, conditions, loops, dictionaries, and structs independently.
-
-The main area for improvement is using functions more naturally and building larger programs by combining multiple concepts together.
+I can now create variables, arrays, functions, conditions, loops, dictionaries, and structs independently. The main area for improvement is using functions more naturally and building larger programs by combining multiple concepts together.
 
 This assessment confirmed that I am ready to move from Julia syntax learning to real-world data processing using CSV files and DataFrames.
-
-Next Step:
-
-- Day08 CSV Files
-- Day09 DataFrames
-- Day10 Statistics
 
 ## Day08 - CSV Files
 
@@ -215,47 +198,51 @@ Next Step:
 
 - Installed and used CSV.jl and DataFrames.jl
 - Created a CSV file to store equipment monitoring data
-- Loaded CSV data into a DataFrame using CSV.read()
-- Accessed DataFrame columns with data[!, :column_name]
-- Used eachrow(data) to iterate through equipment records
+- Loaded CSV data into a DataFrame using `CSV.read()`
+- Accessed DataFrame columns with `data[!, :column_name]`
+- Used `eachrow(data)` to iterate through equipment records
 - Applied conditional logic to detect temperature alarms
 
 ### Key Concepts
 
 - CSV files are commonly used for storing manufacturing and equipment data.
 - DataFrames allow structured data analysis similar to Excel tables.
-- data[!, :temperature] extracts an entire column.
-- eachrow(data) allows processing one equipment record at a time.
+- `data[!, :temperature]` extracts an entire column.
+- `eachrow(data)` allows processing one equipment record at a time.
 
 ### Semiconductor Equipment Example
 
 Created an equipment monitoring dataset:
 
 | Tool ID | Temperature | Pressure | Flow Rate |
-|---------- |------------ |---------- |----------- |
+|---------|-------------|----------|-----------|
 | A01 | 85 | 1.3 | 95 |
 | A02 | 70 | 1.1 | 120 |
 | A03 | 90 | 1.4 | 80 |
 
 Implemented alarm logic:
 
-- Temperature > 80 → Temperature Alarm
-- Otherwise → Normal
+- Temperature > 80: Temperature Alarm
+- Otherwise: Normal
 
 ### Challenges Encountered
+
 - Learned that DataFrame column names must exactly match CSV headers.
 - Debugged column access errors caused by formatting issues.
 - Learned the difference between column-based access and row-based access.
 
 ### Career Relevance
+
 CSV and DataFrames are foundational tools for:
+
 - Semiconductor equipment monitoring
 - Process data analysis
 - Yield analysis
-- Machine Learning datasets
+- Machine learning datasets
 - Applied Materials algorithm development projects
 
 ### Progress
+
 Completed Day08 CSV Files successfully.
 
 ## Day09 - DataFrames
@@ -263,82 +250,92 @@ Completed Day08 CSV Files successfully.
 ### What I Learned
 
 - Loaded CSV data into a DataFrame
-- Used size() to inspect dataset dimensions
-- Used names() to view column names
+- Used `size()` to inspect dataset dimensions
+- Used `names()` to view column names
 - Calculated average, maximum, and minimum values using Statistics.jl
-- Used eachrow() to iterate through equipment records
+- Used `eachrow()` to iterate through equipment records
 - Built temperature, pressure, and critical alarm detection logic
 
 ### Key Concepts
 
-- DataFrames are table-like structures for data analysis
-- Columns can be accessed using data.column_name
-- mean(), maximum(), and minimum() are basic statistical functions
-- eachrow() allows row-by-row analysis
+- DataFrames are table-like structures for data analysis.
+- Columns can be accessed using `data.column_name`.
+- `mean()`, `maximum()`, and `minimum()` are basic statistical functions.
+- `eachrow()` allows row-by-row analysis.
 
 ### Reflection
 
 Today I learned how to analyze equipment data using DataFrames. I calculated statistics and implemented alarm detection logic for semiconductor equipment monitoring. This is an important step toward data analysis and machine learning applications.
 
-
 ## Day10 - Statistics
 
 ### What I Learned
 
-- mean() : Calculate average values
-- maximum() : Find the highest value
-- minimum() : Find the lowest value
-- sum() : Calculate total values
-- median() : Find the middle value in sorted data
-- std() : Measure data variability (Standard Deviation)
+- `mean()`: calculate average values
+- `maximum()`: find the highest value
+- `minimum()`: find the lowest value
+- `sum()`: calculate total values
+- `median()`: find the middle value in sorted data
+- `std()`: measure data variability
 
 ### Key Concepts
 
-Average (Mean)
+Average:
+
 - Sum of all values divided by the number of values.
 
-Median
+Median:
+
 - The middle value after sorting the data.
 
-Standard Deviation (Std)
+Standard deviation:
+
 - Measures how spread out the data is from the average.
-- Lower std means the process is more stable.
-- Higher std means the process may have larger variations.
+- Lower standard deviation means the process is more stable.
+- Higher standard deviation means the process may have larger variations.
 
 ### Practice
 
 Created a temperature dataset:
 
-julia temps = [70, 75, 85, 90, 80] 
+```julia
+temps = [70, 75, 85, 90, 80]
+```
 
 Calculated:
 
-- Average Temperature
-- Maximum Temperature
-- Minimum Temperature
-- Median Temperature
-- Temperature Standard Deviation
+- Average temperature
+- Maximum temperature
+- Minimum temperature
+- Median temperature
+- Temperature standard deviation
 
 ### Equipment Health Report
 
-Loaded equipment.csv into a DataFrame and generated an Equipment Health Report.
+Loaded `equipment.csv` into a DataFrame and generated an Equipment Health Report.
 
 Calculated:
 
-- Average Temperature
-- Maximum Temperature
-- Minimum Temperature
-- Temperature Standard Deviation
+- Average temperature
+- Maximum temperature
+- Minimum temperature
+- Temperature standard deviation
 
 ### Equipment Monitoring Logic
 
 Calculated the average equipment temperature:
 
-julia ave_temp = mean(data.temperature) 
+```julia
+ave_temp = mean(data.temperature)
+```
 
 Detected equipment operating above average temperature:
 
-julia if row.temperature > ave_temp     println("$(row.tool_id) Above Average Temperature") end 
+```julia
+if row.temperature > ave_temp
+    println("$(row.tool_id) Above Average Temperature")
+end
+```
 
 ### Reflection
 
@@ -348,38 +345,34 @@ Instead of only reading raw sensor values, I can now calculate meaningful metric
 
 This is an important step toward:
 
-- Data Analysis
-- Semiconductor Equipment Analytics
-- Machine Learning
-- Algorithm Development
+- Data analysis
+- Semiconductor equipment analytics
+- Machine learning
+- Algorithm development
 
 ### Progress
 
 Completed Day10 Statistics.
 
-Julia Fundamentals:
-100% Complete
+Julia fundamentals: 100% complete.
 
-Next Step:
-Day11 Visualization
+Next step: Day11 Visualization.
 
-# Day11 Learning Log
+## Day11 - Visualization
 
 Date: 2026-06-03
 
-## Topics Learned
+### Topics Learned
 
 - Plots.jl
-- Data Visualization
-- Line Chart
-- Bar Chart
-- Equipment Health Report
+- Data visualization
+- Line charts
+- Bar charts
+- Equipment Health Report visualization
 
-## What I Practiced
+### What I Practiced
 
-### 1. Created a Temperature Trend Chart
-
-Used Plots.jl to visualize temperature data.
+Created a temperature trend chart:
 
 ```julia
 temps = [70, 75, 85, 90, 80]
@@ -390,70 +383,49 @@ plot(
     xlabel = "Measurement",
     ylabel = "Temperature"
 )
-2. Created an Equipment Temperature Bar Chart
+```
 
-Visualized equipment temperature data.
+Created an equipment temperature bar chart:
 
+```julia
 bar(
     data.tool_id,
     data.temperature
 )
+```
 
-3. Built Equipment Health Report
+Built an Equipment Health Report with an average temperature reference line:
 
-Calculated average temperature and displayed it with a reference line.
+```julia
 avg_temperature = mean(data.temperature)
 
 hline!(
     [avg_temperature],
     label = "Average Temperature"
 )
+```
 
-Key Takeaways
+### Key Takeaways
 
-Visualization helps engineers understand equipment conditions quickly.
+Visualization helps engineers understand equipment conditions quickly. Instead of reading raw numbers, charts make abnormal conditions easier to identify.
 
-Instead of reading raw numbers, charts make abnormal conditions easier to identify.
-
-Semiconductor Application
+### Semiconductor Application
 
 Visualization is commonly used for:
 
-* Equipment Monitoring
-* Process Stability Analysis
-* Yield Analysis
-* Predictive Maintenance
-* Manufacturing Data Analysis
+- Equipment monitoring
+- Process stability analysis
+- Yield analysis
+- Predictive maintenance
+- Manufacturing data analysis
 
-Challenges
+### Challenges
 
-* Learned how to install and use Plots.jl
-* Learned how to visualize CSV data
-* Learned how to combine DataFrames, Statistics, and Visualization
+- Learned how to install and use Plots.jl
+- Learned how to visualize CSV data
+- Learned how to combine DataFrames, Statistics, and visualization
 
-Progress
-
-- ✅ Day01 Variables
-- ✅ Day02 Arrays
-- ✅ Day03 Functions
-- ✅ Day04 Conditions
-- ✅ Day05 Loops
-- ✅ Day06 Dictionaries
-- ✅ Day07 Structs
-- ✅ Day08 CSV Files
-- ✅ Day09 DataFrames
-- ✅ Day10 Statistics
-- ✅ Day11 Visualization
-
-### Next
-
-- [ ] Day12 Equipment Data Analysis
-- [ ] Day13 Wafer Yield Analysis
-- [ ] Day14 Predictive Maintenance
-
-## Latest Achievement
-
-### Day11 Visualization
+### Latest Achievement
 
 Built an Equipment Health Report using:
 
@@ -464,14 +436,27 @@ Built an Equipment Health Report using:
 
 Features:
 
-- Temperature Visualization
-- Average Temperature Calculation
-- Equipment Health Monitoring
-- Data-Driven Analysis
+- Temperature visualization
+- Average temperature calculation
+- Equipment health monitoring
+- Data-driven analysis
 
-Example:
+## Overall Progress
 
-- Equipment Temperature Chart
-- Equipment Health Report
-- Average Temperature Reference Line
+- [x] Day01 Variables
+- [x] Day02 Arrays
+- [x] Day03 Functions
+- [x] Day04 Conditions
+- [x] Day05 Loops
+- [x] Day06 Dictionaries
+- [x] Day07 Structs
+- [x] Day08 CSV Files
+- [x] Day09 DataFrames
+- [x] Day10 Statistics
+- [x] Day11 Visualization
 
+## Next
+
+- [ ] Day12 Equipment Data Analysis
+- [ ] Day13 Wafer Yield Analysis
+- [ ] Day14 Predictive Maintenance

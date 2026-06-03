@@ -40,7 +40,7 @@ println(minimum(data[!, :temperature]))
 
 # Challenge 
 # pressure > 1.2
-# 提式 row.pressure
+# 提示 row.pressure
 for row in eachrow(data)
     if row.pressure > 1.2
         println("$(row.tool_id) Pressure Alarm")

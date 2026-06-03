@@ -9,7 +9,7 @@
 tool1 = 依照藍圖建立出來的設備物件
 =#
 
-#定義Structs
+#定義 Structs
 struct Equipment
     temperature
     pressure
@@ -24,7 +24,7 @@ println(tool1.temperature) # 85
 println(tool1.pressure) # 1.3
 println(tool1.flow_rate) # 120
 
-#結合conditionals
+#結合 conditionals
 if tool1.temperature > 80
     println("Temperature Alarm")
 end
