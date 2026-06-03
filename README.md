@@ -49,7 +49,6 @@ Future Focus:
 - ✅ Day06 Dictionaries
 - ✅ Day07 Structs
 
-
 ### Next
 
 - Day08 CSV Files

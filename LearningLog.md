@@ -3,10 +3,10 @@
 ## Day 1
 
 Learned:
-- Variables
-- Strings
-- Integer
-- println()
+  1.Variables()
+  2.Strings()
+  3.Integer()
+  4.println()
 
 Reflection:
 Started learning Julia and created my first GitHub repository.
@@ -14,21 +14,19 @@ Started learning Julia and created my first GitHub repository.
 ## Day 2
 
 Learned:
-- Arrays
-- Indexing
-- sum()
+  1.Arrays
+  2.Indexing
+  3.sum()
 
 Reflection:
 Arrays in Julia are 1-indexed, unlike many other languages.
 
-
-
-## Day 3 
+## Day 3
 
 learned:
-- Functions
-- Parameters
-- Return values
+  1.Functions
+  2.Parameters
+  3.Return values
 
 Example:
 
@@ -40,16 +38,14 @@ Reflection:
 
 Functions allow code reuse and make programs easier to organize.
 
-
-
 ## Day 4
 
 Learned:
-- if
-- else
-- elseif
-- Comparison operators (>, <, >=, <=)
-- Logical operators (&&, ||)
+  1.if
+  2.else
+  3.elseif
+  4.Comparison operators (>, <, >=, <=)
+  5.Logical operators (&&, ||)
 
 Example:
 
@@ -85,10 +81,10 @@ In the future, I can apply this logic to equipment alarms, sensor monitoring, an
 ## Day 5
 
 Learned:
-- for loop
-- iteration
-- looping through arrays
-- combining loops and conditions
+  1.for loop
+  2.iteration
+  3.looping through arrays
+  4.combining loops and conditions
 
 Example:
 
@@ -102,7 +98,7 @@ for temp in temperatures
     end
 end
 
-Charllen example!
+Challeng Example!
 
 Reflection:
 
@@ -115,11 +111,11 @@ This is similar to monitoring semiconductor equipment sensor data.
 ## Day 6
 
 Learned:
-- Dictionaries
-- Key-Value pairs
-- Accessing dictionary values
-- Looping through multiple dictionaries
-- Combining dictionaries with conditions
+  1.Dictionaries
+  2.Key-Value pairs
+  3.Accessing dictionary values
+  4.Looping through multiple dictionaries
+  5.Combining dictionaries with conditions
 
 Example:
 
@@ -160,7 +156,7 @@ Learned:
 - Custom Data Types
 - Object Creation
 - Attribute Access
-- Equipment Monitoring Logic 
+- Equipment Monitoring Logic
 
 Reflection:
 
@@ -212,9 +208,6 @@ Next Step:
 - Day08 CSV Files
 - Day09 DataFrames
 - Day10 Statistics
-
-
-# Learning Log
 
 ## Day08 - CSV Files
 

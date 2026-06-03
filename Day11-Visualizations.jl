@@ -29,7 +29,7 @@ bar(
 )
 
 
-using CSV 
+using CSV
 using DataFrames
 
 data = CSV.read(
