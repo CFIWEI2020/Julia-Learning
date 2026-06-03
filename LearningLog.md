@@ -283,3 +283,86 @@ Completed Day08 CSV Files successfully.
 ### Reflection
 
 Today I learned how to analyze equipment data using DataFrames. I calculated statistics and implemented alarm detection logic for semiconductor equipment monitoring. This is an important step toward data analysis and machine learning applications.
+
+
+## Day10 - Statistics
+
+### What I Learned
+
+- mean() : Calculate average values
+- maximum() : Find the highest value
+- minimum() : Find the lowest value
+- sum() : Calculate total values
+- median() : Find the middle value in sorted data
+- std() : Measure data variability (Standard Deviation)
+
+### Key Concepts
+
+Average (Mean)
+- Sum of all values divided by the number of values.
+
+Median
+- The middle value after sorting the data.
+
+Standard Deviation (Std)
+- Measures how spread out the data is from the average.
+- Lower std means the process is more stable.
+- Higher std means the process may have larger variations.
+
+### Practice
+
+Created a temperature dataset:
+
+julia temps = [70, 75, 85, 90, 80] 
+
+Calculated:
+
+- Average Temperature
+- Maximum Temperature
+- Minimum Temperature
+- Median Temperature
+- Temperature Standard Deviation
+
+### Equipment Health Report
+
+Loaded equipment.csv into a DataFrame and generated an Equipment Health Report.
+
+Calculated:
+
+- Average Temperature
+- Maximum Temperature
+- Minimum Temperature
+- Temperature Standard Deviation
+
+### Equipment Monitoring Logic
+
+Calculated the average equipment temperature:
+
+julia ave_temp = mean(data.temperature) 
+
+Detected equipment operating above average temperature:
+
+julia if row.temperature > ave_temp     println("$(row.tool_id) Above Average Temperature") end 
+
+### Reflection
+
+Today I learned how statistical analysis can be applied to semiconductor equipment data.
+
+Instead of only reading raw sensor values, I can now calculate meaningful metrics such as average temperature, temperature stability, and equipment performance indicators.
+
+This is an important step toward:
+
+- Data Analysis
+- Semiconductor Equipment Analytics
+- Machine Learning
+- Algorithm Development
+
+### Progress
+
+Completed Day10 Statistics.
+
+Julia Fundamentals:
+100% Complete
+
+Next Step:
+Day11 Visualization
