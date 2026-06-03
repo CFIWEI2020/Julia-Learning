@@ -25,13 +25,10 @@ Pressure Stability
 Flow Stability
 =#
 
-<<<<<<< Updated upstream:Day10-Statistics.jl
-=======
+
 using CSV           # Comma-Separated Values 每個檔案都要,去分開
 using DataFrames    # 表格式資料結構,類似 Excel ,類似 Python Pandas
-using Statistics    # 統計學 mean(), std(), median()
-
->>>>>>> Stashed changes:Day10-Satistics.jl
+using Statistics 
 data = CSV.read(
     "equipment.csv",
     DataFrame
