@@ -212,6 +212,7 @@ Next Step:
 ## Day08 - CSV Files
 
 ### What I Learned
+
 - Installed and used CSV.jl and DataFrames.jl
 - Created a CSV file to store equipment monitoring data
 - Loaded CSV data into a DataFrame using CSV.read()
@@ -220,16 +221,18 @@ Next Step:
 - Applied conditional logic to detect temperature alarms
 
 ### Key Concepts
+
 - CSV files are commonly used for storing manufacturing and equipment data.
 - DataFrames allow structured data analysis similar to Excel tables.
 - data[!, :temperature] extracts an entire column.
 - eachrow(data) allows processing one equipment record at a time.
 
 ### Semiconductor Equipment Example
+
 Created an equipment monitoring dataset:
 
 | Tool ID | Temperature | Pressure | Flow Rate |
-|----------|------------|----------|-----------|
+|---------- |------------ |---------- |----------- |
 | A01 | 85 | 1.3 | 95 |
 | A02 | 70 | 1.1 | 120 |
 | A03 | 90 | 1.4 | 80 |

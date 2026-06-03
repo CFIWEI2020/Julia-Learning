@@ -156,27 +156,66 @@ Julia Learning
 - [x] Day05 Loops
 - [x] Day06 Dictionaries
 - [x] Day07 Structs
-
-### Next
-
 - [x] Day08 CSV Files
 - [x] Day09 DataFrames
 - [x] Day10 Statistics
-- [ ] Day11 Visualization
+- [x] Day11 Visualization
 - [ ] Day12 Equipment Data Analysis
+
+## Latest Achievement
+
+### Day11 Visualization
+
+Built an Equipment Health Report using:
+
+- CSV.jl
+- DataFrames.jl
+- Statistics.jl
+- Plots.jl
+
+Features:
+
+- Temperature Visualization
+- Equipment Temperature Dashboard
+- Average Temperature Analysis
+- Equipment Health Monitoring
+- Alarm Trend Visualization
+
+Example Analysis:
+
+- Temperature Trend Chart
+- Equipment Temperature Bar Chart
+- Equipment Health Report
+- Average Temperature Reference Line
 
 ## Long-Term Roadmap
 
-Julia → Python → Data Analysis → Machine Learning → Computer Vision → Semiconductor Projects
+J## Long-Term Roadmap
 
-Target:
+Julia
+→ Data Analysis
+→ Python
+→ Machine Learning
+→ Computer Vision
+→ Semiconductor Analytics
+→ Algorithm Developer
+
+## Portfolio Goals
+
+### Project 1
+
+Equipment Health Dashboard
+
+### Project 2
+
+Wafer Yield Analysis
+
+### Project 3
+
+Predictive Maintenance System
+
+Target Companies:
 
 - Applied Materials (AMAT)
 - ASML
 - TSMC
-
-Portfolio Goals:
-
-- Semiconductor Equipment Monitoring
-- Wafer Yield Analysis
-- Computer Vision Defect Detection
