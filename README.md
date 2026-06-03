@@ -162,7 +162,7 @@ Julia Learning
 
 - [x] Day08 CSV Files
 - [x] Day09 DataFrames
-- [ ] Day10 Statistics
+- [x] Day10 Statistics
 - [ ] Day11 Visualization
 - [ ] Day12 Equipment Data Analysis
 
