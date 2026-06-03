@@ -366,3 +366,116 @@ Julia Fundamentals:
 
 Next Step:
 Day11 Visualization
+
+# Day11 Learning Log
+
+Date: 2026-06-03
+
+## Topics Learned
+
+- Plots.jl
+- Data Visualization
+- Line Chart
+- Bar Chart
+- Equipment Health Report
+
+## What I Practiced
+
+### 1. Created a Temperature Trend Chart
+
+Used Plots.jl to visualize temperature data.
+
+```julia
+temps = [70, 75, 85, 90, 80]
+
+plot(
+    temps,
+    title = "Temperature Trend",
+    xlabel = "Measurement",
+    ylabel = "Temperature"
+)
+2. Created an Equipment Temperature Bar Chart
+
+Visualized equipment temperature data.
+
+bar(
+    data.tool_id,
+    data.temperature
+)
+
+3. Built Equipment Health Report
+
+Calculated average temperature and displayed it with a reference line.
+avg_temperature = mean(data.temperature)
+
+hline!(
+    [avg_temperature],
+    label = "Average Temperature"
+)
+
+Key Takeaways
+
+Visualization helps engineers understand equipment conditions quickly.
+
+Instead of reading raw numbers, charts make abnormal conditions easier to identify.
+
+Semiconductor Application
+
+Visualization is commonly used for:
+
+* Equipment Monitoring
+* Process Stability Analysis
+* Yield Analysis
+* Predictive Maintenance
+* Manufacturing Data Analysis
+
+Challenges
+
+* Learned how to install and use Plots.jl
+* Learned how to visualize CSV data
+* Learned how to combine DataFrames, Statistics, and Visualization
+
+Progress
+
+- ✅ Day01 Variables
+- ✅ Day02 Arrays
+- ✅ Day03 Functions
+- ✅ Day04 Conditions
+- ✅ Day05 Loops
+- ✅ Day06 Dictionaries
+- ✅ Day07 Structs
+- ✅ Day08 CSV Files
+- ✅ Day09 DataFrames
+- ✅ Day10 Statistics
+- ✅ Day11 Visualization
+
+### Next
+
+- [ ] Day12 Equipment Data Analysis
+- [ ] Day13 Wafer Yield Analysis
+- [ ] Day14 Predictive Maintenance
+
+## Latest Achievement
+
+### Day11 Visualization
+
+Built an Equipment Health Report using:
+
+- CSV.jl
+- DataFrames.jl
+- Statistics.jl
+- Plots.jl
+
+Features:
+
+- Temperature Visualization
+- Average Temperature Calculation
+- Equipment Health Monitoring
+- Data-Driven Analysis
+
+Example:
+
+- Equipment Temperature Chart
+- Equipment Health Report
+- Average Temperature Reference Line
+
