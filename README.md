@@ -161,7 +161,7 @@ Julia Learning
 ### Next
 
 - [x] Day08 CSV Files
-- [ ] Day09 DataFrames
+- [x] Day09 DataFrames
 - [ ] Day10 Statistics
 
 ## Long-Term Roadmap

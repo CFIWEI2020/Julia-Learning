@@ -261,3 +261,22 @@ CSV and DataFrames are foundational tools for:
 
 ### Progress
 Completed Day08 CSV Files successfully.
+
+## Day09
+
+Learned:
+
+- DataFrames
+- Data Inspection
+- Mean
+- Maximum
+- Minimum
+- Equipment Alarm Detection
+
+Reflection:
+
+Today I learned how to analyze data using DataFrames.
+
+I calculated average, maximum, and minimum values from equipment data and built simple alarm detection logic.
+
+This is my first step toward semiconductor equipment analytics and machine learning.
