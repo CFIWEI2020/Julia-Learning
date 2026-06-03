@@ -374,7 +374,6 @@ Date: 2026-06-03
 
 Created a temperature trend chart:
 
-```julia
 temps = [70, 75, 85, 90, 80]
 
 plot(

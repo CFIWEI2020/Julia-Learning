@@ -6,7 +6,7 @@
 
 
  Equipment = 類別 / 藍圖（Struct）
-tool1 = 依照藍圖建立出來的設備物件
+ tool1 = 依照藍圖建立出來的設備物件
 =#
 
 #定義 Structs
