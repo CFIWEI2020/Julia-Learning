@@ -159,3 +159,137 @@ Julia fundamentals are now complete. The next step is to move from learning exer
 ## Long-Term Direction
 
 Julia -> Python -> Data Analysis -> Machine Learning -> Computer Vision -> Semiconductor Algorithm Projects
+
+# Equipment Health Dashboard v1
+
+## Project Overview
+
+This project simulates a simple semiconductor equipment health monitoring system.
+
+The system analyzes equipment operating parameters and automatically classifies equipment status into:
+
+- Normal
+- Warning
+- Critical
+
+The goal is to practice data analysis workflows commonly used in semiconductor manufacturing and equipment engineering environments.
+
+---
+
+## Dataset
+
+Input file:
+
+equipment_data.csv
+
+Columns:
+
+| Column | Description |
+|----------|----------|
+| equipment_id | Equipment ID |
+| temperature | Equipment Temperature |
+| pressure | Equipment Pressure |
+| flow_rate | Equipment Flow Rate |
+
+Example:
+
+| equipment_id | temperature | pressure | flow_rate |
+|-------------|-------------|----------|----------|
+| EQ001 | 75 | 1.2 | 100 |
+| EQ002 | 82 | 1.5 | 95 |
+| EQ003 | 95 | 2.1 | 80 |
+| EQ004 | 68 | 1.1 | 105 |
+| EQ005 | 105 | 2.5 | 70 |
+
+---
+
+## Equipment Status Rules
+
+### Critical
+
+- Temperature > 100
+OR
+- Pressure > 2.3
+
+### Warning
+
+- Temperature > 85
+OR
+- Pressure > 1.8
+
+### Normal
+
+All other conditions.
+
+---
+
+## Technologies Used
+
+- Julia
+- CSV.jl
+- DataFrames.jl
+- Statistics.jl
+
+---
+
+## Workflow
+
+### Step 1
+
+Load equipment data.
+
+### Step 2
+
+Create equipment status classification function.
+
+### Step 3
+
+Generate a new status column.
+
+### Step 4
+
+Calculate average equipment metrics.
+
+### Step 5
+
+Count equipment status distribution.
+
+### Step 6
+
+Identify critical equipment.
+
+---
+
+## Example Output
+
+### Status Summary
+
+| Status | Count |
+|----------|----------|
+| Normal | 3 |
+| Warning | 1 |
+| Critical | 1 |
+
+### Critical Equipment
+
+| Equipment ID |
+|----------|
+| EQ005 |
+
+---
+
+## Future Improvements
+
+- Equipment trend analysis
+- Data visualization dashboard
+- Real-time equipment monitoring
+- Predictive maintenance alerts
+- Machine learning anomaly detection
+
+---
+
+## Author
+
+Wei Wang
+
+Learning Project for Semiconductor Equipment Data Analytics
