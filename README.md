@@ -41,7 +41,7 @@ My goal is to build a practical foundation for:
 - [x] Day09 DataFrames
 - [x] Day10 Statistics
 - [x] Day11 Visualization
-- [ ] Day12 Equipment Data Analysis
+- [x] Day12 Equipment Data Analysis
 - [ ] Day13 Wafer Yield Analysis
 - [ ] Day14 Predictive Maintenance
 
