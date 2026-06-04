@@ -51,8 +51,8 @@ df.status =[
 avg_temp = mean(df.temperature)
 avg_pressure = mean(df.pressure)
 
-println("Avege Temperature = " , avg_temp)
-println("Aveage Pressure = " , avg_pressure)
+println("Averge Temperature = " , avg_temp)
+println("Average Pressure = " , avg_pressure)
 
 #Step 5：統計各狀態數量
 status_count = combine(
