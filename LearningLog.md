@@ -454,8 +454,10 @@ Features:
 - [x] Day10 Statistics
 - [x] Day11 Visualization
 - [x] Day12 Equipment Data Analysis
+- [x] Day13 Equipment Dashboard Visualization
 
 ## Next
 
-- [ ] Day13 Wafer Yield Analysis
-- [ ] Day14 Predictive Maintenance
+- [ ] Day14 Equipment Trend Analysis
+- [ ] Day15 Predictive Maintenance Basics
+- [ ] Future Project: Wafer Yield Analysis
