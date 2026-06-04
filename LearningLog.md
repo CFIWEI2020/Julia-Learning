@@ -453,9 +453,9 @@ Features:
 - [x] Day09 DataFrames
 - [x] Day10 Statistics
 - [x] Day11 Visualization
+- [x] Day12 Equipment Data Analysis
 
 ## Next
 
-- [ ] Day12 Equipment Data Analysis
 - [ ] Day13 Wafer Yield Analysis
 - [ ] Day14 Predictive Maintenance
