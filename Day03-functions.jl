@@ -1,4 +1,3 @@
-
 # function 名字name() 最後會有end ->>這樣才會執行這個function 功能！
 function add(a,b)
     return a + b
