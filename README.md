@@ -1,6 +1,6 @@
 # Julia Learning for Semiconductor Data Analytics
 
-This repository documents my Julia programming learning journey, with a focus on building the programming foundation needed for semiconductor equipment analytics, data analysis, and future machine learning projects.
+This repository documents my Julia programming learning journey, focused on building the foundation for semiconductor equipment analytics, data analysis, visualization, and future machine learning projects.
 
 ## Career Target
 
@@ -16,17 +16,13 @@ Target companies:
 - ASML
 - TSMC AI / ML related positions
 
-## Learning Goal
+## Learning Goals
 
-My goal is to build a practical foundation for:
-
-- Programming logic
-- Data structures
-- CSV and tabular data processing
-- Statistical analysis
-- Data visualization
-- Semiconductor equipment monitoring
-- Future Python, machine learning, and computer vision projects
+- Build programming logic and data structure fundamentals
+- Analyze CSV and tabular manufacturing data
+- Practice statistical analysis and data visualization
+- Simulate semiconductor equipment monitoring workflows
+- Prepare for Python, machine learning, computer vision, and semiconductor algorithm projects
 
 ## Progress
 
@@ -41,117 +37,210 @@ My goal is to build a practical foundation for:
 - [x] Day09 DataFrames
 - [x] Day10 Statistics
 - [x] Day11 Visualization
-- [ ] Day12 Equipment Data Analysis
-- [ ] Day13 Wafer Yield Analysis
-- [ ] Day14 Predictive Maintenance
+- [x] Day12 Equipment Data Analysis
+- [x] Day13 Equipment Dashboard Visualization
+- [ ] Day14 Equipment Trend Analysis
+- [ ] Day15 Predictive Maintenance Basics
+- [ ] Future Project: Wafer Yield Analysis
 
 ## Latest Achievement
 
-### Day11 Visualization
+### Day13 - Equipment Dashboard Visualization
 
-Built an Equipment Health Report using:
+Day13 extends the Day12 equipment health analysis project by generating dashboard-style charts from equipment operating data.
 
-- CSV.jl
-- DataFrames.jl
-- Statistics.jl
-- Plots.jl
+Generated outputs:
 
-Features:
+- Temperature distribution histogram
+- Pressure distribution histogram
+- Equipment status summary chart
+- Equipment temperature comparison chart
+- Equipment pressure comparison chart
 
-- Temperature Visualization
-- Equipment Temperature Dashboard
-- Average Temperature Analysis
-- Equipment Health Monitoring
-- Alarm Trend Visualization
+## Current Project: Equipment Health Dashboard
 
-Example Analysis:
+This project simulates a simplified semiconductor equipment monitoring system.
 
-- Temperature Trend Chart
-- Equipment Temperature Bar Chart
-- Equipment Health Report
-- Average Temperature Reference Line
+The system analyzes equipment operating parameters and classifies equipment health status as:
 
-## Current Semiconductor Example
+- Normal
+- Warning
+- Critical
 
-The current dataset simulates basic semiconductor equipment sensor data:
+## Dataset
 
-| Tool ID | Temperature | Pressure | Flow Rate |
-|---------|-------------|----------|-----------|
-| A01 | 85 | 1.3 | 95 |
-| A02 | 70 | 1.1 | 120 |
-| A03 | 90 | 1.4 | 80 |
+Input file:
 
-The analysis currently includes:
+```text
+equipment_data.csv
+```
 
-- Loading equipment data from CSV
-- Inspecting tabular data with DataFrames.jl
-- Calculating average, maximum, minimum, median, and standard deviation
-- Detecting temperature and pressure alarms
-- Creating equipment temperature visualizations
-- Adding an average temperature reference line
+Columns:
+
+| Column | Description |
+|--------|-------------|
+| `equipment_id` | Equipment ID |
+| `temperature` | Equipment temperature |
+| `pressure` | Equipment pressure |
+| `flow_rate` | Equipment flow rate |
+
+Example:
+
+| equipment_id | temperature | pressure | flow_rate |
+|--------------|-------------|----------|-----------|
+| EQ001 | 75 | 1.2 | 100 |
+| EQ002 | 82 | 1.5 | 95 |
+| EQ003 | 95 | 2.1 | 80 |
+| EQ004 | 68 | 1.1 | 105 |
+| EQ005 | 105 | 2.5 | 70 |
+
+## Equipment Status Rules
+
+Critical:
+
+- Temperature > 100
+- OR pressure > 2.3
+
+Warning:
+
+- Temperature > 85
+- OR pressure > 1.8
+
+Normal:
+
+- All other conditions
 
 ## Example Logic
 
-Temperature alarm detection:
-
 ```julia
-if row.temperature > 80
-    println("$(row.tool_id) Temperature Alarm")
-else
-    println("$(row.tool_id) Normal")
+function check_status(temp, pressure)
+    if temp > 100 || pressure > 2.3
+        return "Critical"
+    elseif temp > 85 || pressure > 1.8
+        return "Warning"
+    else
+        return "Normal"
+    end
 end
 ```
 
-Critical alarm detection:
+## Dashboard Outputs
 
-```julia
-if row.temperature > 80 && row.pressure > 1.2
-    println("$(row.tool_id) Critical Alarm")
-end
-```
+### Temperature Distribution
+
+![Temperature Distribution](temperature_distribution.png)
+
+### Pressure Distribution
+
+![Pressure Distribution](pressure_distribution.png)
+
+### Equipment Status
+
+![Equipment Status](equipment_status.png)
+
+### Equipment Temperature
+
+![Equipment Temperature](equipment_temperature.png)
+
+### Equipment Pressure
+
+![Equipment Pressure](equipment_pressure.png)
 
 ## Repository Structure
 
 | File | Purpose |
 |------|---------|
-| `LearningLog.md` | Daily learning notes and reflections |
+| `LearningLog.md` | Main learning notes and progress tracking |
 | `Career Goal.md` | Career roadmap toward semiconductor algorithm roles |
-| `equipment.csv` | Sample equipment monitoring dataset |
+| `equipment.csv` | Early sample equipment monitoring dataset |
+| `equipment_data.csv` | Day12-Day13 equipment dashboard dataset |
 | `Day01-Variables.jl` - `Day07-Structs.jl` | Julia fundamentals |
 | `Day08-CSV-Files.jl` | CSV loading and equipment alarm logic |
 | `Day09-DataFrames.jl` | DataFrame analysis and alarm detection |
 | `Day10-Statistics.jl` | Statistical analysis for equipment data |
-| `Day11-Visualizations.jl` | Equipment health visualization |
+| `Day11-Visualizations.jl` | Basic equipment health visualization |
+| `Day12-Equipment Data Analysis Project V1.jl` | Equipment health classification project |
+| `Day13-Equipment-Dashboard-Visualization.jl` | Dashboard chart generation |
+| `Learning_Log_Day12.md` | Day12 project learning log |
+| `Learning _Log_Day13.md` | Day13 project learning log |
+| `Equipment Dashboard Visualization.md` | Day13 project documentation |
+| `Project.toml` / `Manifest.toml` | Julia project dependencies |
 
 ## Skills Demonstrated
 
 - Julia programming fundamentals
+- CSV data loading
 - DataFrame-based data processing
-- Basic statistical analysis
-- Equipment alarm rule design
-- Data visualization
+- Custom function design
+- Equipment status classification
+- Statistical aggregation with `groupby()` and `combine()`
+- Data visualization with Plots.jl
+- Chart export with `savefig()`
 - Semiconductor equipment analytics thinking
+
+## Technologies Used
+
+- Julia
+- CSV.jl
+- DataFrames.jl
+- Statistics.jl
+- Plots.jl
+
+## How to Run
+
+Install dependencies:
+
+```bash
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
+```
+
+Run Day12 equipment health analysis:
+
+```bash
+julia --project=. "Day12-Equipment Data Analysis Project V1.jl"
+```
+
+Run Day13 dashboard visualization:
+
+```bash
+julia --project=. Day13-Equipment-Dashboard-Visualization.jl
+```
 
 ## Roadmap
 
-Julia fundamentals are now complete. The next step is to move from learning exercises toward portfolio-level projects:
+Current focus:
 
-1. Equipment Data Analysis
-   - Larger simulated equipment dataset
-   - Alarm summary by tool
-   - Health score calculation
+1. Equipment Health Analysis
+   - Equipment status classification
+   - Critical equipment detection
+   - Summary statistics
 
-2. Wafer Yield Analysis
+2. Equipment Dashboard Visualization
+   - Temperature and pressure distribution
+   - Status summary chart
+   - Equipment comparison charts
+
+Next:
+
+3. Equipment Trend Analysis
+   - Time-series equipment data
+   - Trend visualization
+   - Moving average
+   - Early warning detection
+
+Future:
+
+4. Predictive Maintenance
+   - Fault indicators
+   - Maintenance risk scoring
+   - Basic anomaly detection
+
+5. Wafer Yield Analysis
    - Lot-level and wafer-level yield data
    - Correlation analysis
    - Yield loss investigation
 
-3. Predictive Maintenance
-   - Time-series equipment sensor data
-   - Trend analysis
-   - Early warning indicators
-
-4. Computer Vision Defect Detection
+6. Computer Vision Defect Detection
    - Python and OpenCV
    - Defect image preprocessing
    - Basic classification or detection workflow
@@ -160,136 +249,8 @@ Julia fundamentals are now complete. The next step is to move from learning exer
 
 Julia -> Python -> Data Analysis -> Machine Learning -> Computer Vision -> Semiconductor Algorithm Projects
 
-# Equipment Health Dashboard v1
-
-## Project Overview
-
-This project simulates a simple semiconductor equipment health monitoring system.
-
-The system analyzes equipment operating parameters and automatically classifies equipment status into:
-
-- Normal
-- Warning
-- Critical
-
-The goal is to practice data analysis workflows commonly used in semiconductor manufacturing and equipment engineering environments.
-
----
-
-## Dataset
-
-Input file:
-
-equipment_data.csv
-
-Columns:
-
-| Column | Description |
-|----------|----------|
-| equipment_id | Equipment ID |
-| temperature | Equipment Temperature |
-| pressure | Equipment Pressure |
-| flow_rate | Equipment Flow Rate |
-
-Example:
-
-| equipment_id | temperature | pressure | flow_rate |
-|-------------|-------------|----------|----------|
-| EQ001 | 75 | 1.2 | 100 |
-| EQ002 | 82 | 1.5 | 95 |
-| EQ003 | 95 | 2.1 | 80 |
-| EQ004 | 68 | 1.1 | 105 |
-| EQ005 | 105 | 2.5 | 70 |
-
----
-
-## Equipment Status Rules
-
-### Critical
-
-- Temperature > 100
-OR
-- Pressure > 2.3
-
-### Warning
-
-- Temperature > 85
-OR
-- Pressure > 1.8
-
-### Normal
-
-All other conditions.
-
----
-
-## Technologies Used
-
-- Julia
-- CSV.jl
-- DataFrames.jl
-- Statistics.jl
-
----
-
-## Workflow
-
-### Step 1
-
-Load equipment data.
-
-### Step 2
-
-Create equipment status classification function.
-
-### Step 3
-
-Generate a new status column.
-
-### Step 4
-
-Calculate average equipment metrics.
-
-### Step 5
-
-Count equipment status distribution.
-
-### Step 6
-
-Identify critical equipment.
-
----
-
-## Example Output
-
-### Status Summary
-
-| Status | Count |
-|----------|----------|
-| Normal | 3 |
-| Warning | 1 |
-| Critical | 1 |
-
-### Critical Equipment
-
-| Equipment ID |
-|----------|
-| EQ005 |
-
----
-
-## Future Improvements
-
-- Equipment trend analysis
-- Data visualization dashboard
-- Real-time equipment monitoring
-- Predictive maintenance alerts
-- Machine learning anomaly detection
-
----
-
 ## Author
 
 Wei Wang
 
-Learning Project for Semiconductor Equipment Data Analytics
+Learning project for semiconductor equipment data analytics.
