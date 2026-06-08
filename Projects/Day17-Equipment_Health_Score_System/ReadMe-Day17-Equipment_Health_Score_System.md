@@ -102,8 +102,8 @@ Input file:
 - `equipment_health_score.csv`
 - `equipment_health_score.png`
 - `Day17-Equipment_Health_Score_System.jl`
-- `Learning_Log_Day17.md`
-- `ReadMe-Day17-Equipment Health Score System.md`
+- `Learning_Log-Day17.md`
+- `ReadMe-Day17-Equipment_Health_Score_System.md`
 
 ## Semiconductor Relevance
 

@@ -57,7 +57,7 @@ Input file:
 - `equipment_trend.csv`
 - `temperature_trend.png`
 - `Day14_Equipment_Trend_Analysis.jl`
-- `Learning_Log_Day14.md`
+- `Learning_Log-Day14.md`
 - `README-Day14_Equipment_Trend_Analysis.md`
 
 ## Technologies Used

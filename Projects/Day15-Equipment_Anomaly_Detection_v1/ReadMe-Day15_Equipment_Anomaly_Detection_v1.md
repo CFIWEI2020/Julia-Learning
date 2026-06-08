@@ -56,9 +56,9 @@ Input file:
 
 - `equipment_anomaly.csv`
 - `equipment_anomaly.png`
-- `Day15:Equipment Anomaly Detection v1.jl`
-- `Learning_Log_Day15.md`
-- `ReadMe-Day15:Equipment Anomaly Detection v1.md`
+- `Day15-Equipment_Anomaly_Detection_v1.jl`
+- `Learning_Log-Day15.md`
+- `ReadMe-Day15_Equipment_Anomaly_Detection_v1.md`
 
 ## Technologies Used
 

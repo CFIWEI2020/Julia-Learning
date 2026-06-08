@@ -148,23 +148,30 @@ end
 
 ## Repository Structure
 
-| File | Purpose |
+| Path | Purpose |
 |------|---------|
-| `LearningLog.md` | Main learning notes and progress tracking |
+| `fundamentals/` | Day01-Day07 Julia syntax and data structure practice |
+| `data_analysis/` | Day08-Day11 CSV, DataFrames, statistics, and visualization practice |
+| `Projects/Day12-Equipment_Health_Dashboard/` | Equipment health classification project |
+| `Projects/Day13-Equipment_Dashboard_Visualization/` | Dashboard-style equipment visualization project |
+| `Projects/Day14-Equipment_Trend_Analysis/` | Time-series equipment trend analysis project |
+| `Projects/Day15-Equipment_Anomaly_Detection_v1/` | Baseline-based anomaly detection project |
+| `Projects/Day16-Multi_Sensor_Equipment_Monitoring/` | Multi-sensor equipment status monitoring project |
+| `Projects/Day17-Equipment_Health_Score_System/` | Multi-sensor equipment health score project |
+| `Projects/Project01-Equipment_Health_Dashboard/` | Consolidated early dashboard project archive |
 | `Career Goal.md` | Career roadmap toward semiconductor algorithm roles |
-| `equipment.csv` | Early sample equipment monitoring dataset |
-| `equipment_data.csv` | Day12-Day13 equipment dashboard dataset |
-| `Day01-Variables.jl` - `Day07-Structs.jl` | Julia fundamentals |
-| `Day08-CSV-Files.jl` | CSV loading and equipment alarm logic |
-| `Day09-DataFrames.jl` | DataFrame analysis and alarm detection |
-| `Day10-Statistics.jl` | Statistical analysis for equipment data |
-| `Day11-Visualizations.jl` | Basic equipment health visualization |
-| `Day12-Equipment Data Analysis Project V1.jl` | Equipment health classification project |
-| `Day13-Equipment-Dashboard-Visualization.jl` | Dashboard chart generation |
-| `Learning_Log_Day12.md` | Day12 project learning log |
-| `Learning _Log_Day13.md` | Day13 project learning log |
-| `Equipment Dashboard Visualization.md` | Day13 project documentation |
 | `Project.toml` / `Manifest.toml` | Julia project dependencies |
+
+## Project Overview
+
+| Day | Project | Main Skill | Output |
+|-----|---------|------------|--------|
+| Day12 | Equipment Health Dashboard | Rule-based equipment status classification | DataFrame status report |
+| Day13 | Equipment Dashboard Visualization | Dashboard chart generation | Five dashboard PNG charts |
+| Day14 | Equipment Trend Analysis | Time-series trend monitoring | `temperature_trend.png` |
+| Day15 | Equipment Anomaly Detection | Baseline-based anomaly detection | `equipment_anomaly.png` |
+| Day16 | Multi-Sensor Equipment Monitoring | Temperature, pressure, and flow-rate classification | `equipment_status_summary.png` |
+| Day17 | Equipment Health Score System | Multi-sensor KPI scoring | `equipment_health_score.png` |
 
 ## Skills Demonstrated
 
@@ -197,13 +204,37 @@ julia --project=. -e 'using Pkg; Pkg.instantiate()'
 Run Day12 equipment health analysis:
 
 ```bash
-julia --project=. "Day12-Equipment Data Analysis Project V1.jl"
+julia --project=. "Projects/Day12-Equipment_Health_Dashboard/Day12-Equipment_Data_Analysis_Project_V1.jl"
 ```
 
 Run Day13 dashboard visualization:
 
 ```bash
-julia --project=. Day13-Equipment-Dashboard-Visualization.jl
+julia --project=. "Projects/Day13-Equipment_Dashboard_Visualization/Day13_Equipment_Dashboard_Visualization.jl"
+```
+
+Run Day14 trend analysis:
+
+```bash
+julia --project=. "Projects/Day14-Equipment_Trend_Analysis/Day14_Equipment_Trend_Analysis.jl"
+```
+
+Run Day15 anomaly detection:
+
+```bash
+julia --project=. "Projects/Day15-Equipment_Anomaly_Detection_v1/Day15-Equipment_Anomaly_Detection_v1.jl"
+```
+
+Run Day16 multi-sensor monitoring:
+
+```bash
+julia --project=. "Projects/Day16-Multi_Sensor_Equipment_Monitoring/Day16-Multi_Sensor_Equipment_Monitoring.jl"
+```
+
+Run Day17 health score system:
+
+```bash
+julia --project=. "Projects/Day17-Equipment_Health_Score_System/Day17-Equipment_Health_Score_System.jl"
 ```
 
 ## Roadmap
