@@ -2,7 +2,7 @@ using CSV
 using DataFrames
 
 df = CSV.read(
-    "equipment_mutisensor.csv",
+    joinpath(@__DIR__, "equipment_multisensor.csv"),
     DataFrame
 )
 
@@ -52,12 +52,12 @@ using Plots
 p1 = bar(
     status_count.status,
     status_count.count,
-    title = "Eeuipment Status Summary",
+    title = "Equipment Status Summary",
     xlabel = "Status",
     ylabel = "Count"
 )
 
 savefig(
     p1,
-    "equipment_status_summary.png"
+    joinpath(@__DIR__, "equipment_status_summary.png")
 )

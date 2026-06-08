@@ -1,57 +1,60 @@
-# Equipment Dashboard Visualization
+# Day13 - Equipment Dashboard Visualization
 
 ## Overview
 
-This project extends the Equipment Health Dashboard developed in Day12.
+This project extends the Day12 Equipment Health Dashboard by converting equipment operating data into dashboard-style charts.
 
-The goal is to visualize equipment operating conditions and health status using charts and graphs.
-
-The dashboard provides a simple view of:
-
-- Temperature Distribution
-- Pressure Distribution
-- Equipment Health Status
-- Equipment Temperature Comparison
-- Equipment Pressure Comparison
-
----
+The objective is to make equipment condition easier to review through visual summaries instead of reading raw table values only.
 
 ## Dataset
 
-Input file:
+Input files:
 
-equipment_data.csv
+- `data/equipment_data.csv`
+- `data/equipment.csv`
 
-Columns:
+Main columns:
 
-| Column       | Description           |
-|--------------|-----------------------|
-| equipment_id | Equipment ID          |
-| temperature  | Equipment Temperature |
-| pressure     | Equipment Pressure    |
-| flow_rate    | Equipment Flow Rate   |
+| Column | Description |
+|--------|-------------|
+| `equipment_id` | Equipment ID |
+| `temperature` | Equipment temperature |
+| `pressure` | Equipment pressure |
+| `flow_rate` | Equipment flow rate |
 
----
+## Objectives
+
+- Load equipment sensor data from CSV files
+- Classify equipment health status
+- Summarize status counts with DataFrames.jl
+- Generate dashboard charts with Plots.jl
+- Export chart images for reporting
 
 ## Equipment Status Rules
 
-### Critical
+| Status | Rule |
+|--------|------|
+| Critical | Temperature > 100 or pressure > 2.3 |
+| Warning | Temperature > 85 or pressure > 1.8 |
+| Normal | All other conditions |
 
-- Temperature > 100
-OR
-- Pressure > 2.3
+## Analysis Workflow
 
-### Warning
+1. Load equipment data from CSV.
+2. Create a `status` column using equipment health rules.
+3. Group equipment by status and count each category.
+4. Generate distribution and comparison charts.
+5. Save dashboard outputs as PNG files.
 
-- Temperature > 85
-OR
-- Pressure > 1.8
+## Generated Outputs
 
-### Normal
-
-All other conditions.
-
----
+| Output | Purpose |
+|--------|---------|
+| `output/temperature_distribution.png` | Shows temperature distribution |
+| `output/pressure_distribution.png` | Shows pressure distribution |
+| `output/equipment_status.png` | Summarizes Normal, Warning, and Critical equipment |
+| `output/equipment_temperature.png` | Compares temperature by equipment |
+| `output/equipment_pressure.png` | Compares pressure by equipment |
 
 ## Technologies Used
 
@@ -60,78 +63,15 @@ All other conditions.
 - DataFrames.jl
 - Plots.jl
 
----
+## Skills Demonstrated
 
-## Dashboard Charts
+- CSV data loading
+- DataFrame column creation
+- Conditional equipment status classification
+- Grouped aggregation with `groupby()` and `combine()`
+- Dashboard-style visualization
+- Chart export with `savefig()`
 
-### 1. Temperature Distribution
+## Semiconductor Relevance
 
-Histogram showing equipment temperature distribution.
-
-Output:
-
-temperature_distribution.png
-
----
-
-### 2. Pressure Distribution
-
-Histogram showing equipment pressure distribution.
-
-Output:
-
-pressure_distribution.png
-
----
-
-### 3. Equipment Status Summary
-
-Bar chart showing the number of:
-
-- Normal
-- Warning
-- Critical
-
-equipment.
-
-Output:
-
-equipment_status.png
-
----
-
-### 4. Equipment Temperature Comparison
-
-Bar chart comparing temperatures across equipment.
-
-Output:
-
-equipment_temperature.png
-
----
-
-### 5. Equipment Pressure Comparison
-
-Bar chart comparing pressure values across equipment.
-
-Output:
-
-equipment_pressure.png
-
----
-
-## Generated Files
-
-temperature_distribution.png
-pressure_distribution.png
-equipment_status.png
-equipment_temperature.png
-equipment_pressure.png
-
-Skills Demonstrated
-
-* Data Processing with DataFrames
-- Equipment Health Classification
-* Statistical Aggregation
-* Data Visualization
-* Dashboard Development
+Dashboard visualization is commonly used in semiconductor manufacturing to monitor equipment condition, compare tool performance, and highlight abnormal operating states for engineering review.

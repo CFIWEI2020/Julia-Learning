@@ -1,5 +1,5 @@
 # 1.建立資料 equipment_trend.csv 
-# 2.讀取資料 CSV,DataFeram,Plots,Statistics
+# 2.讀取資料 CSV,DataFrame,Plots,Statistics
 
 using CSV
 using DataFrames
@@ -7,7 +7,7 @@ using Plots
 using Statistics
 
 df = CSV.read(
-    "equipment_trend.csv",
+    joinpath(@__DIR__, "equipment_trend.csv"),
     DataFrame
 )
 
@@ -19,15 +19,15 @@ println(names(df))
 p1 = plot(
     df.date,
     df.temperature,
-    maker = :circle,
+    marker = :circle,
     title = "Equipment Temperature Trend",
-    xlabel = "Data",
+    xlabel = "Date",
     ylabel = "Temperature"
 )
 
 savefig(
     p1,
-    "temperature_trend.png"
+    joinpath(@__DIR__, "temperature_trend.png")
 )
 
 #4.找出最高溫

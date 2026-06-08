@@ -39,23 +39,23 @@ Target companies:
 - [x] Day11 Visualization
 - [x] Day12 Equipment Data Analysis
 - [x] Day13 Equipment Dashboard Visualization
-- [ ] Day14 Equipment Trend Analysis
-- [ ] Day15 Predictive Maintenance Basics
+- [x] Day14 Equipment Trend Analysis
+- [x] Day15 Equipment Anomaly Detection
+- [x] Day16 Multi-Sensor Equipment Monitoring
+- [x] Day17 Equipment Health Score System
 - [ ] Future Project: Wafer Yield Analysis
 
 ## Latest Achievement
 
-### Day13 - Equipment Dashboard Visualization
+### Day17 - Equipment Health Score System
 
-Day13 extends the Day12 equipment health analysis project by generating dashboard-style charts from equipment operating data.
+Day17 builds a multi-sensor health score system for equipment monitoring.
 
-Generated outputs:
+Generated results:
 
-- Temperature distribution histogram
-- Pressure distribution histogram
-- Equipment status summary chart
-- Equipment temperature comparison chart
-- Equipment pressure comparison chart
+- Health score calculation from temperature, pressure, and flow rate
+- Health level classification: Excellent, Good, Warning, Critical
+- Equipment health score chart
 
 ## Current Project: Equipment Health Dashboard
 
@@ -220,27 +220,48 @@ Current focus:
    - Status summary chart
    - Equipment comparison charts
 
-Next:
+Completed:
 
 3. Equipment Trend Analysis
    - Time-series equipment data
    - Trend visualization
-   - Moving average
    - Early warning detection
+
+4. Equipment Anomaly Detection
+   - Baseline calculation
+   - Threshold-based anomaly detection
+   - Abnormal equipment filtering
+
+5. Multi-Sensor Equipment Monitoring
+   - Temperature, pressure, and flow rate analysis
+   - Normal, Warning, and Critical classification
+   - Equipment status summary visualization
+
+6. Equipment Health Score System
+   - Health score calculation
+   - Health level classification
+   - Equipment KPI foundation
+
+Next:
+
+7. Equipment Ranking Dashboard
+   - Rank equipment by health score
+   - Highlight high-risk equipment
+   - Prioritize maintenance actions
 
 Future:
 
-4. Predictive Maintenance
+8. Predictive Maintenance
    - Fault indicators
    - Maintenance risk scoring
    - Basic anomaly detection
 
-5. Wafer Yield Analysis
+9. Wafer Yield Analysis
    - Lot-level and wafer-level yield data
    - Correlation analysis
    - Yield loss investigation
 
-6. Computer Vision Defect Detection
+10. Computer Vision Defect Detection
    - Python and OpenCV
    - Defect image preprocessing
    - Basic classification or detection workflow

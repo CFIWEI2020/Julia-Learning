@@ -1,29 +1,23 @@
-# Equipment Anomaly Detection
+# Day15 - Equipment Anomaly Detection
 
 ## Overview
 
 This project focuses on detecting abnormal equipment behavior using temperature data.
 
-Anomaly detection is a fundamental technique in equipment monitoring and predictive maintenance.
-
 The objective is to identify equipment operating outside the normal range before failures occur.
 
----
+This version uses a baseline-based rule as the first step toward predictive maintenance analysis.
 
 ## Dataset
 
 Input file:
 
-equipment_anomaly.csv
+`equipment_anomaly.csv`
 
-### Columns
-
-|    Column    |       Description     |
-|--------------|-----------------------|
-| equipment_id |       Equipment ID    |
-| temperature  | Equipment Temperature |
-
----
+| Column | Description |
+|--------|-------------|
+| `equipment_id` | Equipment ID |
+| `temperature` | Equipment temperature |
 
 ## Objectives
 
@@ -32,7 +26,39 @@ equipment_anomaly.csv
 - Classify equipment as Normal or Anomaly
 - Identify equipment requiring attention
 
----
+## Analysis Workflow
+
+1. Load equipment temperature data.
+2. Calculate the average temperature as the baseline.
+3. Detect abnormal readings using a threshold rule.
+4. Add a `status` column to the DataFrame.
+5. Filter anomalous equipment records.
+6. Generate a bar chart for review.
+
+## Anomaly Rule
+
+| Status | Rule |
+|--------|------|
+| Anomaly | Temperature > average temperature + 20 |
+| Normal | All other conditions |
+
+## Results
+
+| Equipment ID | Temperature | Status |
+|--------------|------------:|--------|
+| EQ001 | 75 | Normal |
+| EQ002 | 78 | Normal |
+| EQ003 | 80 | Normal |
+| EQ004 | 82 | Normal |
+| EQ005 | 140 | Anomaly |
+
+## Generated Files
+
+- `equipment_anomaly.csv`
+- `equipment_anomaly.png`
+- `Day15:Equipment Anomaly Detection v1.jl`
+- `Learning_Log_Day15.md`
+- `ReadMe-Day15:Equipment Anomaly Detection v1.md`
 
 ## Technologies Used
 
@@ -41,86 +67,6 @@ equipment_anomaly.csv
 - DataFrames.jl
 - Statistics.jl
 - Plots.jl
-
----
-
-## Analysis Workflow
-
-### 1. Load Equipment Data
-
-Read CSV data into a DataFrame.
-
-### 2. Calculate Baseline
-
-Calculate average temperature:
-
-avg_temp = mean(df.temperature)
-
----
-
-### 3. Detect Anomalies
-
-Rule:
-
-Temperature > Average Temperature + 20
-
-Classification:
-
-- Normal
-- Anomaly
-
----
-
-### 4. Generate Status Column
-
-Create a new column:
-
-df.status
-
-to store anomaly results.
-
----
-
-### 5. Filter Abnormal Equipment
-
-Use:
-
-filter()
-
-to identify anomalous equipment.
-
----
-
-### 6. Visualize Results
-
-Generate:
-
-equipment_anomaly.png
-
----
-
-## Results
-
-Example:
-
-| Equipment ID | Temperature |  Status  |
-|--------------|-------------|----------|
-|    EQ001     |      75     |  Normal  |
-|    EQ002     |      78     |  Normal  |
-|    EQ003     |      80     |  Normal  |
-|    EQ004     |      82     |  Normal  |
-|    EQ005     |      140    |  Anomaly |
-
----
-
-## Generated Files
-
-equipment_anomaly.csv
-equipment_anomaly.png
-Day15-Equipment-Anomaly-Detection.jl
-Learning_Log_Day15.md
-README.md
----
 
 ## Semiconductor Relevance
 
@@ -132,10 +78,8 @@ Anomaly detection is widely used in:
 - Smart Manufacturing
 - Semiconductor Process Control
 
----
-
 ## Author
 
 Wei Wang
 
-Julia Learning Project – Semiconductor Equipment Analytics
+Julia Learning Project - Semiconductor Equipment Analytics

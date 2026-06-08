@@ -6,7 +6,7 @@ using DataFrames
 using Statistics
 
 df = CSV.read(
-    "equipment_anomaly.csv",
+    joinpath(@__DIR__, "equipment_anomaly.csv"),
     DataFrame
 )
 
@@ -27,20 +27,19 @@ function detect_anomaly(
     temp,
     avg_temp
 )
-
-if temp > avg_temp +20
-    return("Anomaly")
+    if temp > avg_temp + 20
+        return "Anomaly"
     else
-    return("Normal")
+        return "Normal"
     end
 end
 
 println(detect_anomaly(85, avg_temp))
 println(detect_anomaly(120, avg_temp))
 
-#stpe5 新增欄位
-df.status =[
-    detect_anormaly(
+#step5 新增欄位
+df.status = [
+    detect_anomaly(
         temp,
         avg_temp
     )
@@ -64,12 +63,12 @@ using Plots
 p1 = bar(
     df.equipment_id,
     df.temperature,
-    title = "Equipment",
-    xlabel = "Euqipment_id",
+    title = "Equipment Temperature Anomaly Detection",
+    xlabel = "Equipment ID",
     ylabel = "Temperature"
 )
 
 savefig(
-    p1,# 把這個建造的表格
-    "equipment_anomaly.png" #存在底下叫什麼名字和檔案格式
+    p1, # 把這個建造的表格
+    joinpath(@__DIR__, "equipment_anomaly.png") #存在底下叫什麼名字和檔案格式
 )

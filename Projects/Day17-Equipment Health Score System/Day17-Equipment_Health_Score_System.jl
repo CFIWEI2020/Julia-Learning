@@ -23,39 +23,38 @@ function health_score(
     # temperature
     if temperature <= 80
         score += 40
-    elseif temperature <=90
+    elseif temperature <= 90
         score += 30
     elseif temperature <= 100
-        score +=20
-    else 
-        score +=10
+        score += 20
+    else
+        score += 10
     end
 
-    #pressure 
+    # pressure
     if pressure <= 1.5
         score = score + 30
     elseif pressure <= 2.0
-        score = score +20
+        score = score + 20
     elseif pressure <= 2.3
         score = score + 10
     else
         score = score + 0
     end
 
-    #flpw_rare
-
+    # flow_rate
     if flow_rate >= 120
         score += 30
-    elseif flow_rate >= 119
+    elseif flow_rate >= 110
         score += 20
-    elseif flow_rate >= 109
+    elseif flow_rate >= 100
         score += 10
     else
         score += 0
     end
 
     return score
-end  
+end
 
 println(df)
 # 新增Score 欄位
@@ -97,12 +96,12 @@ using Plots
 p1 = bar(
     df.equipment_id,
     df.health_score,
-    title = "Equipemnt Health Score",
+    title = "Equipment Health Score",
     xlabel = "Equipment ID",
     ylabel = "Health Score"
 )
 
 savefig(
     p1,
-    "equipment_health_score.png"
+    joinpath(@__DIR__, "equipment_health_score.png")
 )

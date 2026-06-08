@@ -5,24 +5,24 @@ using DataFrames
 using Plots
 
 df = CSV.read(
-    "equipment_data.csv",
+    joinpath(@__DIR__, "data", "equipment_data.csv"),
     DataFrame
 )
 println(df)
 println(names(df))
 
-function check_status(temp,pressure)
+function check_status(temp, pressure)
     if temp > 100 || pressure > 2.3
         return "Critical"
     elseif temp > 85 || pressure > 1.8
         return "Warning"
-    else 
+    else
         return "Normal"
     end
 end
 
 df.status = [
-    check_status(row.temperature , row[:pressure])
+    check_status(row.temperature, row.pressure)
     for row in eachrow(df)
 ]
 
@@ -34,21 +34,26 @@ status_count = combine(
 println(df)
 println(status_count)
 
-
 p1 = histogram(
     df.temperature,
     bins = 5,
     title = "Temperature Distribution"
 )
 
-savefig(p1, "temperature_distribution.png")
+savefig(
+    p1,
+    joinpath(@__DIR__, "output", "temperature_distribution.png")
+)
 
 p2 = histogram(
     df.pressure,
     bins = 5,
     title = "Pressure Distribution"
 )
-savefig(p2, "pressure_distribution.png")
+savefig(
+    p2,
+    joinpath(@__DIR__, "output", "pressure_distribution.png")
+)
 
 p3 = bar(
     status_count.status,
@@ -57,7 +62,10 @@ p3 = bar(
     xlabel = "Status",
     ylabel = "Count"
 )
-savefig(p3, "equipment_status.png")
+savefig(
+    p3,
+    joinpath(@__DIR__, "output", "equipment_status.png")
+)
 
 p4 = bar(
     df.equipment_id,
@@ -66,7 +74,10 @@ p4 = bar(
     xlabel = "Equipment ID",
     ylabel = "Temperature"
 )
-savefig(p4, "equipment_temperature.png")
+savefig(
+    p4,
+    joinpath(@__DIR__, "output", "equipment_temperature.png")
+)
 
 p5 = bar(
     df.equipment_id,
@@ -75,7 +86,10 @@ p5 = bar(
     xlabel = "Equipment ID",
     ylabel = "Pressure"
 )
-savefig(p5, "equipment_pressure.png")
+savefig(
+    p5,
+    joinpath(@__DIR__, "output", "equipment_pressure.png")
+)
 
 #=
 histogram(
@@ -112,4 +126,3 @@ bar(
     ylabel = "Pressure"
 )
 =#
-

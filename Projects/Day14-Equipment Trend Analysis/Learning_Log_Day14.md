@@ -127,7 +127,7 @@ maker = :cicle
 
 Correct:
 
-maker = :cicle
+marker = :circle
 
 ---
 

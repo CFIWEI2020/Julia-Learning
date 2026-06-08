@@ -214,13 +214,17 @@ Generated:
 
 ## Next Step
 
-### Day18 – Equipment Ranking Dashboard
+### Day18 - Equipment Ranking Dashboard
 
 Topics:
+
+- Rank equipment by health score
+- Highlight high-risk equipment
+- Build a maintenance priority view
+- Improve dashboard-style reporting
 
 - sort()
 - Ranking Systems
 - Top Equipment
 - Worst Equipment
 - Maintenance Priority Analysis
-  

@@ -1,84 +1,117 @@
-# Day15 Learning Log
+# Day16 Learning Log
 
 Date: 2026-06-08
 
 ## Project
 
-Equipment Anomaly Detection
+Multi-Sensor Equipment Monitoring
 
 ---
 
 ## Goal
 
-Learn how to detect abnormal equipment behavior using temperature data.
+Learn how to classify equipment status using multiple sensor values.
 
-The objective is to identify potential equipment issues before failures occur.
+The objective is to evaluate equipment condition using temperature, pressure, and flow rate together instead of relying on a single measurement.
 
 ---
 
 ## What I Learned
 
-### Baseline Analysis
+### Multi-Sensor Status Logic
 
-Calculated the average equipment temperature:
+Used three sensor measurements:
 
-avg_temp = mean(df.temperature)
+- Temperature
+- Pressure
+- Flow Rate
 
-The average temperature serves as a baseline for anomaly detection.
+This creates a more realistic equipment monitoring rule than checking temperature alone.
 
 ---
 
-### Threshold-Based Detection
+### Health Status Function
 
-Created a simple anomaly rule:
+Created a custom function:
 
-if temp > avg_temp + 20
-    return "Anomaly"
-else
-    return "Normal"
+health_status(
+    temp,
+    pressure,
+    flow
+)
+
+The function returns:
+
+- Normal
+- Warning
+- Critical
+
+based on combined sensor conditions.
+
+---
+
+### Critical and Warning Rules
+
+Critical condition:
+
+if temp > 100 ||
+    pressure > 2.3 ||
+    flow < 100
+    return "Critical"
 end
 
-This is a basic threshold-based anomaly detection method.
+Warning condition:
+
+if temp > 85 ||
+    pressure > 1.8 ||
+    flow < 110
+    return "Warning"
+end
 
 ---
 
-### Status Classification
+### DataFrame Column Generation
 
 Generated a new status column:
 
 df.status
 
-Possible values:
-
-- Normal
-- Anomaly
-
----
-
-### Filtering Abnormal Equipment
-
-Used:
-
-filter()
-
-to isolate anomalous equipment records.
+using list comprehension and `eachrow(df)`.
 
 Example:
 
-anomaly_df = filter(
-    row -> row.status == "Anomaly",
-    df
-)
+df.status = [
+    health_status(
+        row.temperature,
+        row.pressure,
+        row.flow_rate
+    )
+    for row in eachrow(df)
+]
+
+---
+
+### Status Summary
+
+Used:
+
+groupby(df, :status)
+
+and:
+
+combine(..., nrow => :count)
+
+to count how many equipment records were Normal, Warning, or Critical.
 
 ---
 
 ### Data Visualization
 
-Created a bar chart to compare equipment temperatures.
+Created a bar chart to summarize equipment status counts.
 
 Output:
 
-equipment_anomaly.png
+equipment_status_summary.png
 
 ---
 
@@ -86,45 +119,39 @@ equipment_anomaly.png
 
 ### Challenge 1
 
-Understanding baseline values.
+Combining multiple conditions.
 
-Initially focused on fixed thresholds.
-
-Learned that anomaly detection often compares values against a baseline rather than a fixed limit.
+Learned how to use `||` to check whether any sensor condition reaches a warning or critical threshold.
 
 ---
 
 ### Challenge 2
 
-Understanding why averages are useful.
+Keeping variable names consistent.
 
-Average values provide a reference point for identifying abnormal measurements.
+The function parameters must match the values passed from each DataFrame row.
 
 ---
 
 ### Challenge 3
 
-Filtering specific records.
+Understanding multi-sensor logic.
 
-Practiced using:
-
-filter()
-
-to extract anomalous equipment.
+Temperature alone is not enough for equipment monitoring. Pressure and flow rate can also indicate abnormal equipment behavior.
 
 ---
 
 ## Semiconductor Analytics Relevance
 
-Anomaly detection is widely used in semiconductor manufacturing for:
+Multi-sensor equipment monitoring is widely used in semiconductor manufacturing for:
 
-- Temperature Monitoring
-- Pressure Monitoring
-- Flow Rate Monitoring
 - Equipment Health Monitoring
 - Predictive Maintenance
+- Process Stability Monitoring
+- Maintenance Prioritization
+- Smart Manufacturing Dashboards
 
-Engineers investigate anomalies before they become equipment failures.
+This project moves from single-sensor anomaly detection toward a more realistic equipment monitoring workflow.
 
 ---
 
@@ -132,26 +159,24 @@ Engineers investigate anomalies before they become equipment failures.
 
 Completed:
 
-- Baseline Calculation
-- Threshold Detection
-- Status Classification
-- Equipment Filtering
-- Visualization
+- Multi-sensor status classification
+- DataFrame status column generation
+- Status count aggregation
+- Equipment status summary visualization
 
 Generated:
 
-- equipment_anomaly.png
+- equipment_status_summary.png
 
 ---
 
 ## Next Step
 
-### Day16 – Multi-Sensor Equipment Monitoring
+### Day17 - Equipment Health Score System
 
 Topics:
 
-- Temperature
-- Pressure
-- Flow Rate
-- Equipment Health Status
-- Multi-Sensor Analysis
+- Health score calculation
+- Equipment health levels
+- Multi-sensor KPI design
+- Equipment ranking foundation
