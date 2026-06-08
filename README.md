@@ -128,23 +128,23 @@ end
 
 ### Temperature Distribution
 
-![Temperature Distribution](temperature_distribution.png)
+![Temperature Distribution](Projects/Day13-Equipment_Dashboard_Visualization/output/temperature_distribution.png)
 
 ### Pressure Distribution
 
-![Pressure Distribution](pressure_distribution.png)
+![Pressure Distribution](Projects/Day13-Equipment_Dashboard_Visualization/output/pressure_distribution.png)
 
 ### Equipment Status
 
-![Equipment Status](equipment_status.png)
+![Equipment Status](Projects/Day13-Equipment_Dashboard_Visualization/output/equipment_status.png)
 
 ### Equipment Temperature
 
-![Equipment Temperature](equipment_temperature.png)
+![Equipment Temperature](Projects/Day13-Equipment_Dashboard_Visualization/output/equipment_temperature.png)
 
 ### Equipment Pressure
 
-![Equipment Pressure](equipment_pressure.png)
+![Equipment Pressure](Projects/Day13-Equipment_Dashboard_Visualization/output/equipment_pressure.png)
 
 ## Repository Structure
 
