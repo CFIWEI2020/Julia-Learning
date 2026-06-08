@@ -55,9 +55,9 @@ Input file:
 
 - `equipment_multisensor.csv`
 - `equipment_status_summary.png`
-- `Day16-Multi-Sensor Equipment Monitoring.jl`
-- `Learning_Log_Day16.md`
-- `README-Day16-MultiSensor-Equipment-Monitoring.md`
+- `Day16-Multi_Sensor_Equipment_Monitoring.jl`
+- `Learning_Log-Day16.md`
+- `README-Day16-MultiSensor_Equipment_Monitoring.md`
 
 ## Technologies Used
 

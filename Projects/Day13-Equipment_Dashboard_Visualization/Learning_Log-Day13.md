@@ -186,7 +186,7 @@ Day13_Equipment_Dashboard_Visualization/
 ├── equipment_data.csv
 ├── dashboard.jl
 ├── README.md
-├── Learning_Log_Day13.md
+├── Learning_Log-Day13.md
 │
 ├── temperature_distribution.png
 ├── pressure_distribution.png

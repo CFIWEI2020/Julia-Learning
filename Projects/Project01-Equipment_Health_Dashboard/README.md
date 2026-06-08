@@ -6,6 +6,8 @@ This project analyzes semiconductor equipment data using Julia.
 
 The system reads equipment sensor data from CSV files and generates health reports and visualization charts.
 
+This folder is a consolidated early project archive that combines the Day12 equipment health analysis and Day13 dashboard visualization workflow.
+
 ---
 
 ## Features
