@@ -1,6 +1,0 @@
-equipment_id,temperature,pressure,flow_rate
-EQ001,75,1.2,120
-EQ002,82,1.5,118
-EQ003,95,2.0,110
-EQ004,88,1.9,105
-EQ005,105,2.5,90
