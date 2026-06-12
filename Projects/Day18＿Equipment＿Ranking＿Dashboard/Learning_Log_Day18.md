@@ -177,7 +177,7 @@ Debugging DataFrame Columns
 
 Used:
 
-```
+```Julia
 println(names(df))
 ```
 
