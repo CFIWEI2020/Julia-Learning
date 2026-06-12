@@ -64,6 +64,9 @@ df.status =[
     for temp in df.temperature
 ]
 
+println(df)
+println(names(df))
+
 warning_df = filter(
     row -> row.status == "Warning",
     df
