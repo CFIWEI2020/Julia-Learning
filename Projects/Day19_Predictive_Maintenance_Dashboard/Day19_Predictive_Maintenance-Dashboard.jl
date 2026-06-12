@@ -189,7 +189,7 @@ using Plots
 p1 = bar(
     df.equipment_id,
     df.health_score,
-    titel = "Predictive Maintenance Dashboard",
+    title = "Predictive Maintenance Dashboard",
     xlabel = "Equipment ID",
     ylabel = "Health Score"
 )
