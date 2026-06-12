@@ -89,4 +89,3 @@ These topics are the foundation for algorithm development, data analysis, and ma
 ## Long-Term Direction
 
 Julia -> Data Analysis -> Python -> Computer Vision -> Machine Learning -> Semiconductor Algorithms -> Applied Materials / ASML / TSMC
-
