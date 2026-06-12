@@ -26,12 +26,12 @@ equipment_health_score.csv
 
 ### Columns
 
-| Column | Description |
-|----------|----------|
-| equipment_id | Equipment ID |
-| temperature | Equipment Temperature |
-| pressure | Equipment Pressure |
-| flow_rate | Equipment Flow Rate |
+|     Column    |     Description       |
+|---------------|-----------------------|
+| equipment_id  |    Equipment ID       |
+| temperature   | Equipment Temperature |
+| pressure      | Equipment Pressure    |
+| flow_rate     | Equipment Flow Rate   |
 
 ---
 
@@ -80,12 +80,12 @@ health_score
 
 Classify equipment condition:
 
-| Score | Level |
-|---------|---------|
-| > 80 | Excellent |
-| > 60 | Good |
-| > 40 | Warning |
-| ≤ 40 | Critical |
+|  Score  |   Level   |
+|---------|-----------|
+|  > 80   | Excellent |
+|  > 60   | Good      |
+|  > 40   | Warning   |
+|  ≤ 40   | Critical  |
 
 Output:
 
@@ -101,13 +101,11 @@ Sort equipment by health score.
 
 Example:
 
-```julia
 ranking_df = sort(
     df,
     :health_score,
     rev = true
 )
-```
 
 ---
 
@@ -115,11 +113,11 @@ ranking_df = sort(
 
 Maintenance Priority Rules:
 
-| Score | Priority |
-|---------|---------|
-| > 80 | Low |
-| > 60 | Medium |
-| ≤ 60 | High |
+|   Score | Priority |
+|---------|----------|
+|   > 80  | Low      |
+|   > 60  | Medium   |
+|   ≤ 60  | High     |
 
 Output:
 
@@ -131,13 +129,13 @@ priority
 
 ## Example Result
 
-| Rank | Equipment ID | Health Score | Level | Priority |
-|--------|------------|------------:|----------|----------|
-| 1 | EQ001 | 100 | Excellent | Low |
-| 2 | EQ002 | 90 | Excellent | Low |
-| 3 | EQ003 | 60 | Warning | Medium |
-| 4 | EQ004 | 60 | Warning | Medium |
-| 5 | EQ005 | 10 | Critical | High |
+|  Rank  | Equipment ID | Health Score | Level     | Priority |
+|--------|--------------|--------------|-----------|----------|
+|   1    |     EQ001    |      100     | Excellent | Low      |
+|   2    |     EQ002    |      90      | Excellent | Low      |
+|   3    |     EQ003    |      60      | Warning   | Medium   |
+|   4    |     EQ004    |      60      | Warning   | Medium   |
+|   5    |     EQ005    |      10      | Critical  | High     |
 
 ---
 

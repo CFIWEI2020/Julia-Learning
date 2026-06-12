@@ -24,7 +24,7 @@ Learned how to sort a DataFrame using a specific column.
 
 Example:
 
-```julia
+```
 ranking_df = sort(
     df,
     :health_score,
@@ -162,7 +162,7 @@ Learned that:
 - CSV files only store the original data.
 - New columns must be regenerated or saved using:
 
-```julia
+```
 CSV.write(
     "output.csv",
     df
@@ -177,7 +177,7 @@ Debugging DataFrame Columns
 
 Used:
 
-```julia
+```
 println(names(df))
 ```
 
@@ -274,7 +274,3 @@ Topics:
 - Health Score
 - Equipment Ranking
 - Maintenance Recommendations
-
-Goal:
-
-Automatically recommend maintenance actions based on equipment condition and risk level.
