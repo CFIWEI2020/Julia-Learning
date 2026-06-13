@@ -1,6 +1,6 @@
 # Julia Learning for Semiconductor Data Analytics
 
-This repository documents my Julia programming learning journey, focused on building the foundation for semiconductor equipment analytics, data analysis, visualization, and future machine learning projects.
+This repository documents my Julia programming learning journey, focused on semiconductor equipment analytics, data analysis, visualization, risk assessment, and future machine learning projects.
 
 ## Career Target
 
@@ -22,6 +22,7 @@ Target companies:
 - Analyze CSV and tabular manufacturing data
 - Practice statistical analysis and data visualization
 - Simulate semiconductor equipment monitoring workflows
+- Build rule-based equipment health, risk, and maintenance decision systems
 - Prepare for Python, machine learning, computer vision, and semiconductor algorithm projects
 
 ## Progress
@@ -43,108 +44,44 @@ Target companies:
 - [x] Day15 Equipment Anomaly Detection
 - [x] Day16 Multi-Sensor Equipment Monitoring
 - [x] Day17 Equipment Health Score System
+- [x] Day18 Equipment Ranking Dashboard
+- [x] Day19 Predictive Maintenance Dashboard
+- [x] Day20 Equipment Risk Assessment System
+- [ ] Day21 Equipment Risk Dashboard Visualization
 - [ ] Future Project: Wafer Yield Analysis
 
 ## Latest Achievement
 
-### Day17 - Equipment Health Score System
+### Day20 - Equipment Risk Assessment System
 
-Day17 builds a multi-sensor health score system for equipment monitoring.
+Day20 converts equipment health information into risk scores, risk levels, maintenance actions, and equipment priority ranking.
 
-Generated results:
+Key results:
 
-- Health score calculation from temperature, pressure, and flow rate
-- Health level classification: Excellent, Good, Warning, Critical
-- Equipment health score chart
+- Risk score calculation from health score
+- Risk level classification: Low, Medium, High, Very High
+- Maintenance action recommendation
+- Equipment ranking by risk score
+- Highest-risk equipment identification
 
-## Current Project: Equipment Health Dashboard
+## Current Portfolio Direction
 
-This project simulates a simplified semiconductor equipment monitoring system.
-
-The system analyzes equipment operating parameters and classifies equipment health status as:
-
-- Normal
-- Warning
-- Critical
-
-## Dataset
-
-Input file:
+The current project series simulates a simplified semiconductor equipment analytics workflow:
 
 ```text
-equipment_data.csv
+Sensor Data
+-> Equipment Status
+-> Trend Analysis
+-> Anomaly Detection
+-> Multi-Sensor Monitoring
+-> Health Score
+-> Equipment Ranking
+-> Predictive Maintenance Dashboard
+-> Risk Assessment
+-> Maintenance Action
 ```
 
-Columns:
-
-| Column | Description |
-|--------|-------------|
-| `equipment_id` | Equipment ID |
-| `temperature` | Equipment temperature |
-| `pressure` | Equipment pressure |
-| `flow_rate` | Equipment flow rate |
-
-Example:
-
-| equipment_id | temperature | pressure | flow_rate |
-|--------------|-------------|----------|-----------|
-| EQ001 | 75 | 1.2 | 100 |
-| EQ002 | 82 | 1.5 | 95 |
-| EQ003 | 95 | 2.1 | 80 |
-| EQ004 | 68 | 1.1 | 105 |
-| EQ005 | 105 | 2.5 | 70 |
-
-## Equipment Status Rules
-
-Critical:
-
-- Temperature > 100
-- OR pressure > 2.3
-
-Warning:
-
-- Temperature > 85
-- OR pressure > 1.8
-
-Normal:
-
-- All other conditions
-
-## Example Logic
-
-```julia
-function check_status(temp, pressure)
-    if temp > 100 || pressure > 2.3
-        return "Critical"
-    elseif temp > 85 || pressure > 1.8
-        return "Warning"
-    else
-        return "Normal"
-    end
-end
-```
-
-## Dashboard Outputs
-
-### Temperature Distribution
-
-![Temperature Distribution](Projects/Day13-Equipment_Dashboard_Visualization/output/temperature_distribution.png)
-
-### Pressure Distribution
-
-![Pressure Distribution](Projects/Day13-Equipment_Dashboard_Visualization/output/pressure_distribution.png)
-
-### Equipment Status
-
-![Equipment Status](Projects/Day13-Equipment_Dashboard_Visualization/output/equipment_status.png)
-
-### Equipment Temperature
-
-![Equipment Temperature](Projects/Day13-Equipment_Dashboard_Visualization/output/equipment_temperature.png)
-
-### Equipment Pressure
-
-![Equipment Pressure](Projects/Day13-Equipment_Dashboard_Visualization/output/equipment_pressure.png)
+This direction is relevant to semiconductor equipment monitoring, fault detection, maintenance prioritization, and predictive maintenance workflows.
 
 ## Repository Structure
 
@@ -152,13 +89,16 @@ end
 |------|---------|
 | `fundamentals/` | Day01-Day07 Julia syntax and data structure practice |
 | `data_analysis/` | Day08-Day11 CSV, DataFrames, statistics, and visualization practice |
-| `Projects/Day12-Equipment_Health_Dashboard/` | Equipment health classification project |
-| `Projects/Day13-Equipment_Dashboard_Visualization/` | Dashboard-style equipment visualization project |
-| `Projects/Day14-Equipment_Trend_Analysis/` | Time-series equipment trend analysis project |
-| `Projects/Day15-Equipment_Anomaly_Detection_v1/` | Baseline-based anomaly detection project |
-| `Projects/Day16-Multi_Sensor_Equipment_Monitoring/` | Multi-sensor equipment status monitoring project |
-| `Projects/Day17-Equipment_Health_Score_System/` | Multi-sensor equipment health score project |
-| `Projects/Project01-Equipment_Health_Dashboard/` | Consolidated early dashboard project archive |
+| `Projects/Day12_Equipment_Health_Dashboard/` | Equipment health classification project |
+| `Projects/Day13_Equipment_Dashboard_Visualization/` | Dashboard-style equipment visualization project |
+| `Projects/Day14_Equipment_Trend_Analysis/` | Time-series equipment trend analysis project |
+| `Projects/Day15_Equipment_Anomaly_Detection_v1/` | Baseline-based anomaly detection project |
+| `Projects/Day16_Multi_Sensor_Equipment_Monitoring/` | Multi-sensor equipment status monitoring project |
+| `Projects/Day17_Equipment_Health_Score_System/` | Multi-sensor equipment health score project |
+| `Projects/Day18＿Equipment＿Ranking＿Dashboard/` | Equipment ranking dashboard project |
+| `Projects/Day19_Predictive_Maintenance_Dashboard/` | Predictive maintenance dashboard project |
+| `Projects/Day20_Equipment_Risk_Assessment_System/` | Equipment risk assessment and maintenance action project |
+| `Projects/Project01_Equipment_Health_Dashboard/` | Consolidated early dashboard project archive |
 | `Career Goal.md` | Career roadmap toward semiconductor algorithm roles |
 | `Project.toml` / `Manifest.toml` | Julia project dependencies |
 
@@ -172,6 +112,53 @@ end
 | Day15 | Equipment Anomaly Detection | Baseline-based anomaly detection | `equipment_anomaly.png` |
 | Day16 | Multi-Sensor Equipment Monitoring | Temperature, pressure, and flow-rate classification | `equipment_status_summary.png` |
 | Day17 | Equipment Health Score System | Multi-sensor KPI scoring | `equipment_health_score.png` |
+| Day18 | Equipment Ranking Dashboard | Rank equipment by health score | `equipment_ranking.png` |
+| Day19 | Predictive Maintenance Dashboard | Maintenance priority visualization | `predictive_maintenance_dashboard.png` |
+| Day20 | Equipment Risk Assessment System | Risk scoring and maintenance action logic | Highest-risk equipment report |
+
+## Selected Dashboard Outputs
+
+### Day13 Equipment Status
+
+![Equipment Status](Projects/Day13_Equipment_Dashboard_Visualization/output/equipment_status.png)
+
+### Day17 Equipment Health Score
+
+![Equipment Health Score](Projects/Day17_Equipment_Health_Score_System/equipment_health_score.png)
+
+### Day18 Equipment Ranking
+
+![Equipment Ranking](Projects/Day18＿Equipment＿Ranking＿Dashboard/equipment_ranking.png)
+
+### Day19 Predictive Maintenance Dashboard
+
+![Predictive Maintenance Dashboard](predictive_maintenance_dashboard.png)
+
+## Day20 Risk Assessment Logic
+
+Risk score formula:
+
+```julia
+risk_score = 100 - health_score
+```
+
+Risk level rules:
+
+| Risk Score | Risk Level |
+|------------|------------|
+| >= 80 | Very High |
+| >= 60 | High |
+| >= 40 | Medium |
+| < 40 | Low |
+
+Maintenance actions:
+
+| Risk Level | Action |
+|------------|--------|
+| Very High | Maintenance Immediately |
+| High | Maintenance Within 7 Days |
+| Medium | Operation Monitoring |
+| Low | Normal Operation |
 
 ## Skills Demonstrated
 
@@ -179,10 +166,12 @@ end
 - CSV data loading
 - DataFrame-based data processing
 - Custom function design
-- Equipment status classification
+- Rule-based equipment status classification
 - Statistical aggregation with `groupby()` and `combine()`
 - Data visualization with Plots.jl
 - Chart export with `savefig()`
+- Health score and risk score design
+- Equipment ranking and maintenance prioritization
 - Semiconductor equipment analytics thinking
 
 ## Technologies Used
@@ -204,98 +193,93 @@ julia --project=. -e 'using Pkg; Pkg.instantiate()'
 Run Day12 equipment health analysis:
 
 ```bash
-julia --project=. "Projects/Day12-Equipment_Health_Dashboard/Day12-Equipment_Data_Analysis_Project_V1.jl"
+julia --project=. "Projects/Day12_Equipment_Health_Dashboard/Day12_Equipment_Data_Analysis_Project_V1.jl"
 ```
 
 Run Day13 dashboard visualization:
 
 ```bash
-julia --project=. "Projects/Day13-Equipment_Dashboard_Visualization/Day13_Equipment_Dashboard_Visualization.jl"
+julia --project=. "Projects/Day13_Equipment_Dashboard_Visualization/Day13_Equipment_Dashboard_Visualization.jl"
 ```
 
 Run Day14 trend analysis:
 
 ```bash
-julia --project=. "Projects/Day14-Equipment_Trend_Analysis/Day14_Equipment_Trend_Analysis.jl"
+julia --project=. "Projects/Day14_Equipment_Trend_Analysis/Day14_Equipment_Trend_Analysis.jl"
 ```
 
 Run Day15 anomaly detection:
 
 ```bash
-julia --project=. "Projects/Day15-Equipment_Anomaly_Detection_v1/Day15-Equipment_Anomaly_Detection_v1.jl"
+julia --project=. "Projects/Day15_Equipment_Anomaly_Detection_v1/Day15_Equipment_Anomaly_Detection_v1.jl"
 ```
 
 Run Day16 multi-sensor monitoring:
 
 ```bash
-julia --project=. "Projects/Day16-Multi_Sensor_Equipment_Monitoring/Day16-Multi_Sensor_Equipment_Monitoring.jl"
+julia --project=. "Projects/Day16_Multi_Sensor_Equipment_Monitoring/Day16_Multi_Sensor_Equipment_Monitoring.jl"
 ```
 
 Run Day17 health score system:
 
 ```bash
-julia --project=. "Projects/Day17-Equipment_Health_Score_System/Day17-Equipment_Health_Score_System.jl"
+julia --project=. "Projects/Day17_Equipment_Health_Score_System/Day17_Equipment_Health_Score_System.jl"
+```
+
+Run Day18 equipment ranking dashboard:
+
+```bash
+julia --project=. "Projects/Day18＿Equipment＿Ranking＿Dashboard/Day18_Equipment_Ranking_Dashboard.jl"
+```
+
+Run Day19 predictive maintenance dashboard:
+
+```bash
+julia --project=. "Projects/Day19_Predictive_Maintenance_Dashboard/Day19_Predictive_Maintenance-Dashboard.jl"
+```
+
+Run Day20 risk assessment system:
+
+```bash
+julia --project=. "Projects/Day20_Equipment_Risk_Assessment_System/Day20_Equipment_Risk_Assessment_System.jl"
 ```
 
 ## Roadmap
 
-Current focus:
-
-1. Equipment Health Analysis
-   - Equipment status classification
-   - Critical equipment detection
-   - Summary statistics
-
-2. Equipment Dashboard Visualization
-   - Temperature and pressure distribution
-   - Status summary chart
-   - Equipment comparison charts
-
 Completed:
 
-3. Equipment Trend Analysis
-   - Time-series equipment data
-   - Trend visualization
-   - Early warning detection
-
-4. Equipment Anomaly Detection
-   - Baseline calculation
-   - Threshold-based anomaly detection
-   - Abnormal equipment filtering
-
-5. Multi-Sensor Equipment Monitoring
-   - Temperature, pressure, and flow rate analysis
-   - Normal, Warning, and Critical classification
-   - Equipment status summary visualization
-
-6. Equipment Health Score System
-   - Health score calculation
-   - Health level classification
-   - Equipment KPI foundation
+1. Julia fundamentals
+2. CSV and DataFrames
+3. Statistics and visualization
+4. Equipment health classification
+5. Equipment dashboard visualization
+6. Equipment trend analysis
+7. Equipment anomaly detection
+8. Multi-sensor equipment monitoring
+9. Equipment health score system
+10. Equipment ranking dashboard
+11. Predictive maintenance dashboard
+12. Equipment risk assessment system
 
 Next:
 
-7. Equipment Ranking Dashboard
-   - Rank equipment by health score
-   - Highlight high-risk equipment
-   - Prioritize maintenance actions
+13. Equipment Risk Dashboard Visualization
+    - Risk distribution chart
+    - Risk level summary chart
+    - Maintenance action dashboard
+    - Highest-risk equipment highlight
 
 Future:
 
-8. Predictive Maintenance
-   - Fault indicators
-   - Maintenance risk scoring
-   - Basic anomaly detection
+14. Wafer Yield Analysis
+    - Lot-level and wafer-level yield data
+    - Correlation analysis
+    - Yield loss investigation
 
-9. Wafer Yield Analysis
-   - Lot-level and wafer-level yield data
-   - Correlation analysis
-   - Yield loss investigation
-
-10. Computer Vision Defect Detection
-   - Python and OpenCV
-   - Defect image preprocessing
-   - Basic classification or detection workflow
+15. Computer Vision Defect Detection
+    - Python and OpenCV
+    - Defect image preprocessing
+    - Basic classification or detection workflow
 
 ## Long-Term Direction
 
